@@ -114,15 +114,16 @@ def fwdScoring(players):
     return gks
 
 def pickTeam(g,d,m,f):
-    gk1 = g[12] # Cheapest gk
+    gk1 = g[12] # Cheapest gk, plays for Aston Villa so needs to be replaced
     gk2 = random.choice(g)
     while(gk1 == gk2):
         gk2 = random.choice(g)
     
     d1 = d[13] # Ben Johnson lowest def
-    d2 = random.choice(d)
-    while(d1 == d2):
-        d2 = random.choice(d)
+    d2 = d[58] # Jarrad Branthwaite, lowest def
+    #d2 = random.choice(d)
+    #while(d1 == d2):
+    #    d2 = random.choice(d)
 
     d3 = random.choice(d)
     while(d1 == d3 or d2 == d3):
