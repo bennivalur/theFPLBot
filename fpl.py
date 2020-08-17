@@ -285,6 +285,7 @@ defs = defScoring(defs)
 mids = midScoring(mids)
 fwds = fwdScoring(fwds)
 
+#Set this for number of attempts
 attempts = 10000000
 counter = 0
 
