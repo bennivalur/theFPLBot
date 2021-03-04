@@ -1,3 +1,10 @@
 fantasypl2020/
-*csv
-*.json
+old/
+fpl/
+keys/
+understat/
+maindata/
+fixtures/
+projections/
+wip/
+tempfiles/

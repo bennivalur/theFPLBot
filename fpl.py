@@ -8,7 +8,7 @@ import time
 
 from collections import Counter
 
-with open('fpl.json') as f_in:
+with open('tempfiles/fpl.json') as f_in:
        players = json.load(f_in)
 
 #Creates puts the fpl and understat data together
@@ -19,7 +19,7 @@ def makeMain():
 
     data = pd.merge(understat,pl,on='full_name',how='inner')
 
-    with open('main_table.csv', 'w') as file:
+    with open('tempfiles/main_table.csv', 'w') as file:
             file.write(data.to_csv(index=False))
 
     players = pd.read_csv('main_table.csv', low_memory=False)
