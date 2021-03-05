@@ -28,6 +28,29 @@ teams = [
     'West Ham',
     'Wolves'
 ]
+teams_u = [
+    {'title':'0','uid':-1},
+    {'title':'Arsenal','uid': '83'},
+    {'title':'Aston Villa','uid':'71'},
+    {'title':'Brighton','uid':'220'},
+    {'title':'Burnley','uid':'92'},
+    {'title':'Chelsea', 'uid':'80'},
+    {'title':'Crystal Palace','uid':'78'},
+    {'title':'Everton','uid':'72'},
+    {'title':'Fulham','uid':'228'},
+    {'title':'Leicester','uid':'75'},
+    {'title':'Leeds','uid':'245'},
+    {'title':'Liverpool','uid':'87'},
+    {'title':'Manchester City','uid':'88'},
+    {'title':'Manchester United','uid':'89'},
+    {'title':'Newcastle United','uid':'86'},
+    {'title':'Sheffield United', 'uid':'238'},
+    {'title':'Southampton', 'uid':'74'},
+    {'title':'Tottenham','uid':'82'},
+    {'title':'West Bromwich Albion','uid':'76'},
+    {'title':'West Ham', 'uid':'81'},
+    {'title':'Wolverhampton Wanderers','uid':'229'},
+]
 
 colors = {
     'Arsenal':'#EF0107',
@@ -111,7 +134,7 @@ def makeProjections():
         player = list(filter(lambda pl: pl['fpl_id'] == p['id'], main_players))
         if(player != []):
             odds = {
-                'clean_sheet':list(filter(lambda x: x['team'] == player[0]['team_title_u'],clean_sheets ))
+                'clean_sheet':list(filter(lambda x: x['team'] == teams_u[player[0]['team']]['title'] ,clean_sheets ))
             }
             player_projections.append(scoring(player[0],odds))
         else:
@@ -162,7 +185,7 @@ def scoring(p,odds):
     games = p['games']
 
     total_games = p['total_points'] / p['points_per_game']
-
+    
     pts = 0
     if(games != 0) and odds['clean_sheet'] != None:
         goals = p['goals']
