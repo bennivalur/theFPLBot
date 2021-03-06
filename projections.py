@@ -186,17 +186,18 @@ def scoring(p,odds):
 
     total_games = p['total_points'] / p['points_per_game']
     
+    
     pts = 0
     if(games != 0) and odds['clean_sheet'] != None:
         goals = p['goals']
         xg = p['xG']
 
-        assists = p['assists_x']
+        assists = p['assists_y']
         xa = p['xA']
 
         yellows = p['yellow_cards_x'] / total_games
 
-        minutes = p['minutes']
+        minutes = p['time']
 
         pts += goals_scoring[pos] * (goals + xg) / 2
         pts += assists_scoring[pos] * (assists + xa) / 2
@@ -217,11 +218,11 @@ def scoring(p,odds):
         elif (minutes/games > 10):
             pts += 1
 
+        pts = pts * cH * len(odds['clean_sheet'])
 
         for o in odds['clean_sheet']:
             pts += cs[pos] * float(o['csOdds'])
 
-        pts = pts * cH * len(odds['clean_sheet'])
 
     pl = {
         'name':p['player_name'],
