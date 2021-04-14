@@ -6,7 +6,7 @@ import urllib.request
 import aiohttp
 from datetime import datetime
 from getLeagueResults import getSeasons
-from predictCS import getRangeStart
+from predictCS import getRangeStart,getNextGameWeek
 import requests
 from understat import Understat
 
@@ -88,6 +88,7 @@ def getData(week):
     mergeSets()
     getFixtures(week)
     plAllToJson()
+
 
 #week = 26
 #getData(week)

@@ -115,6 +115,7 @@ def getRangeStart(form_range):
 
 #getUnderStat(2020)
 def predictCS():
+    print("Predicting Clean Sheets Odds")
     fplFixtures()
     week = getNextGameWeek()
 
