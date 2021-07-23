@@ -1,9 +1,58 @@
-import urllib.request
-import pandas as pd
+import asyncio
 import json
+import pandas as pd
+import os
+import urllib.request
+import aiohttp
+from datetime import datetime
+from getLeagueResults import getSeasons
+from predictCS import getRangeStart,getNextGameWeek
+import requests
+from understat import Understat
+from statistics import mean
+import numpy as np
 
-#from understat import Understat
-from getData import getData
+import matplotlib.pyplot as plt
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+
+
+
+import psycopg2
+from getData import *
+
+async def main():
+    async with aiohttp.ClientSession() as session:
+        url = 'https://understat.com/main/getPlayersStats/'
+        myobj = {'season': '2020','league':'epl'}
+
+        players = requests.post(url, data = myobj)
+        players = players.json()
+        players = players['response']['players']
+        players = json.dumps(players)
+        with open('tempfiles/understat2021.json', 'w') as file:
+            file.write(players)
+
+        
+        main_table = pd.read_json('tempfiles/understat2021.json')
+        main_table.to_csv('tempfiles/understat2021.csv',index=False)
+
+def getUnderStat():
+    print("Get Understat")
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
+
+
+
+        
+
+#GetData
+def gData():
+    getSeasons('EPL','2020')
+    getFPL()
+    getUnderStat()
+    mergeSets()
+    plAllToJson()
+
 
 teams = [
     '0',
@@ -125,18 +174,15 @@ def makeProjections():
     with open('tempfiles/maindata.json','r') as main_pl:
         main_players = json.load(main_pl)
     
-    with open('tempfiles/clean_sheet_odds.json','r') as cs:
-        clean_sheets = json.load(cs)
+    
 
 
     player_projections = []
     for p in all_players:
         player = list(filter(lambda pl: pl['fpl_id'] == p['id'], main_players))
         if(player != []):
-            odds = {
-                'clean_sheet':list(filter(lambda x: x['team'] == teams_u[player[0]['team']]['title'] ,clean_sheets ))
-            }
-            player_projections.append(scoring(player[0],odds))
+            
+            player_projections.append(scoring(player[0]))
         else:
             pl = {
                 'name':p['first_name'] + ' ' + p['second_name'],
@@ -178,24 +224,23 @@ def chanceHelper(chance_of_playing):
         return chance_of_playing / 100
 
 
-def scoring(p,odds):
+def scoring(p):
     pos = p['element_type']
-    team = p['team']
+    team = p['team_x']
 
     games = p['games']
 
-    total_games = p['total_points'] / p['points_per_game']
     
     
     pts = 0
-    if(games != 0) and odds['clean_sheet'] != None:
+    if(games != 0):
         goals = p['goals']
         xg = p['xG']
 
         assists = p['assists_y']
         xa = p['xA']
 
-        yellows = p['yellow_cards_x'] / total_games
+        yellows = p['yellow_cards_x']
 
         minutes = p['time']
 
@@ -203,25 +248,22 @@ def scoring(p,odds):
         pts += assists_scoring[pos] * (assists + xa) / 2
         pts += yellows * -1
 
-        cH = chanceHelper(p['chance_of_playing_next_round'])
         #if GK
         if(pos == 1):
-            saves = p['saves'] / total_games
+            saves = p['saves'] 
             pts += saves * gk_scoring['saves']
-            penalties = p['penalties_saved'] / total_games
+            penalties = p['penalties_saved']
             pts += penalties * gk_scoring['penalties_saved']
 
-        pts = pts / games
+        predictedMinutes = predictMinutes(p['web_name'],p['fpl_id'])
 
-        if(minutes/games >= 60):
-            pts += 2
-        elif (minutes/games > 10):
-            pts += 1
+        pts = (pts / minutes) * predictedMinutes
 
-        pts = pts * cH * len(odds['clean_sheet'])
+        playingPoints = (predictedMinutes / 60) * 2
 
-        for o in odds['clean_sheet']:
-            pts += cs[pos] * float(o['csOdds'])
+        pts += playingPoints
+
+        print(p['web_name'] + " last minutes: " + str(minutes) + " | predicted minutes: " + str(predictedMinutes))
 
 
     pl = {
@@ -235,8 +277,79 @@ def scoring(p,odds):
         'fpl_id':p['fpl_id'],
         'rank':0
     }
+    
     return pl
 
+#Use carefully, lol
+def getHistory():
+    with open('tempfiles/fpl_players.json','r') as fpl:
+        all_players = json.load(fpl)
+
+    for p in all_players:
+        fpl = urllib.request.urlopen("https://fantasy.premierleague.com/api/element-summary/" + str(p['id']) + "/").read()
+        fpl = json.loads(fpl)
+        
+        with open('playerHistory/'+ p['web_name'] + '_' + str(p['id']) + '.json', 'w') as file:
+            file.write(json.dumps(fpl))
+   
+        print(p['web_name'])
+
+def best_fit_slope_and_intercept(xs,ys):
+    m = (((mean(xs)*mean(ys)) - mean(xs*ys)) /
+         ((mean(xs)*mean(xs)) - mean(xs*xs)))
+    
+    b = mean(ys) - m*mean(xs)
+    
+    return m, b
+
+def predictMinutes(name,id):
+    with open('playerHistory/'+ name + '_' + str(id) + '.json','r') as fpl:
+        player = json.load(fpl)
+    
+    player = player['history_past']
+
+    if(len(player) > 5):
+        player = player[5:]
+
+    if(len(player) > 1):
+        x = []
+        minutes = []
+        index = 1
+        for s in player:
+            x.append(index)
+            minutes.append(s['minutes'])
+            index += 1
 
 
-#makeProjections()
+        xs = np.array(x, dtype=np.float64)
+        ys = np.array(minutes, dtype=np.float64)
+
+        m, b = best_fit_slope_and_intercept(xs,ys)
+
+        predicted_minutes = (m*index)+b 
+    elif (len(player) == 1):
+        predicted_minutes = player[0]['minutes']
+    else:
+        print(name + " zero seasons" )
+        predicted_minutes = 0
+
+    if(predicted_minutes < 0):
+        predicted_minutes = 0
+    elif(predicted_minutes > 3420):
+        predicted_minutes = 3420
+
+    return predicted_minutes
+
+
+
+    
+
+
+
+#predictMinutes('Kane',357)
+#plotProjections('Kane',357)
+#plotTop(4)
+
+
+
+makeProjections()

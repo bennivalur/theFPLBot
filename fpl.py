@@ -1,4 +1,3 @@
-import pandas as pd
 import os
 import urllib.request
 import json
@@ -6,124 +5,21 @@ import random
 import operator
 import time
 
+from drawTeam import drawTeam
+
 from collections import Counter
 
-with open('tempfiles/fpl.json') as f_in:
-       players = json.load(f_in)
-
-#Creates puts the fpl and understat data together
-#Some records don't match up and should be edited in whatver csv editor to improve the data before running
-def makeMain():
-    understat = pd.read_csv('understat2020.csv', low_memory=False)
-    pl = pd.read_csv('pl2020.csv', low_memory=False)
-
-    data = pd.merge(understat,pl,on='full_name',how='inner')
-
-    with open('tempfiles/main_table.csv', 'w') as file:
-            file.write(data.to_csv(index=False))
-
-    players = pd.read_csv('main_table.csv', low_memory=False)
-
-    players.to_json ('fpl.json',orient='records', lines=True)
-
-#Get players from certain position: G D M F
-def fillPlayers(players,position):
-    return list(filter(lambda d: d['pos_y'] == position, players))
-
-def gkScoring(players):
-    pl = {}
-    gks = []
-    for p in players:
-      xga = ((p['xG'] * 6) + ((p['xA']) * 3))
-      cs = ((p['clean_sheets']) * 4)
-      gc = ((p['goals_conceded']) * -0.5)
-      saves = ((p['saves']  ) / 3)
-      pens = ((p['penalties_saved']  ) * 5)
-      yellow = ((p['yellow_cards_y']  ))
-      minutes = p['minutes'] / 30
-      pts = xga + cs + gc + pens + saves + yellow + minutes
-      pl = {
-        'name':p['full_name'],
-        'team': p['Team'],
-        'pos':p['pos_y'],
-        'pts':pts,
-        'cost':p['now_cost']
-      }
-      if(p['time'] > -1):
-        gks.append(pl)
-    return gks
-
-def defScoring(players):
-    pl = {}
-    gks = []
-    for p in players:
-      xga = ((p['xG'] * 6) + ((p['xA']) * 3))
-      cs = ((p['clean_sheets']) * 4)
-      gc = ((p['goals_conceded']) * -0.5)
-      yellow = ((p['yellow_cards_y'] *-1 ))
-      minutes = p['minutes'] / 30
-      pts = xga + cs + gc + yellow + minutes
-      pl = {
-        'name':p['full_name'],
-        'team': p['Team'],
-        'pos':p['pos_y'],
-        'pts':pts,
-        'cost':p['now_cost']
-      }
-      if(p['time'] > -1):
-        gks.append(pl)
-    return gks
-
-def midScoring(players):
-    pl = {}
-    gks = []
-    for p in players:
-      xga = ((p['xG'] * 5) + ((p['xA']) * 3))
-      cs = ((p['clean_sheets']) * 1)
-      yellow = ((p['yellow_cards_y'] *-1 ))
-      minutes = p['minutes'] / 30
-      pts = xga + cs + yellow + minutes
-      pl = {
-        'name':p['full_name'],
-        'team': p['Team'],
-        'pos':p['pos_y'],
-        'pts':pts,
-        'cost':p['now_cost']
-      }
-      if(p['time'] > -1):
-        gks.append(pl)
-    return gks
-
-def fwdScoring(players):
-    pl = {}
-    gks = []
-    for p in players:
-      xga = ((p['xG'] * 4) + ((p['xA']) * 3))
-      yellow = ((p['yellow_cards_y'] *-1 ))
-      minutes = p['minutes'] / 30
-      pts = xga  + yellow + minutes
-      pl = {
-        'name':p['full_name'],
-        'team': p['Team'],
-        'pos':p['pos_y'],
-        'pts':pts,
-        'cost':p['now_cost']
-      }
-      if(p['time'] > -1):
-        gks.append(pl)
-    return gks
 
 def pickTeam(g,d,m,f):
-    gk1 = g[12] # Cheapest gk, plays for Aston Villa so needs to be replaced
+    gk1 = g[30] # Cheapest gk, 
     gk2 = random.choice(g)
     while(gk1 == gk2):
         gk2 = random.choice(g)
     
-    d1 = d[13] # Ben Johnson lowest def
-    d2 = d[58] # Jarrad Branthwaite, lowest def
-    #d2 = random.choice(d)
-    #while(d1 == d2):
-    #    d2 = random.choice(d)
+    d1 = random.choice(d)
+    d2 = random.choice(d)
+    while(d1 == d2):
+        d2 = random.choice(d)
 
     d3 = random.choice(d)
     while(d1 == d3 or d2 == d3):
@@ -274,19 +170,18 @@ def scoring532(team):
     temp = [team[0],team[2],team[3],team[4],team[5],team[6],team[7],team[8],team[9],team[12],team[13]]
     return calculatePoints(temp)
 
-#fill player positions
-gks = fillPlayers(players,'GK')
-defs = fillPlayers(players, 'D')
-mids = fillPlayers(players,'M')
-fwds = fillPlayers(players,'F')
+with open('tempfiles/projections.json','r') as fpl:
+    all_players = json.load(fpl)
 
-gks = gkScoring(gks)
-defs = defScoring(defs)
-mids = midScoring(mids)
-fwds = fwdScoring(fwds)
+#fill player positions
+gks = list(filter(lambda d: d['pos'] == 'GK', all_players))
+defs = list(filter(lambda d: d['pos'] == 'D', all_players))
+mids = list(filter(lambda d: d['pos'] == 'M', all_players))
+fwds = list(filter(lambda d: d['pos'] == 'F', all_players))
+
 
 #Set this for number of attempts
-attempts = 10000000
+attempts = 100000
 counter = 0
 
 best_team = []
@@ -294,6 +189,7 @@ best_points = 0
 best_formation = ''
 start = time.time()
 print("run simulation")
+
 while(counter < attempts):
     if not(counter % 100000):
         print(counter / attempts)
@@ -311,14 +207,10 @@ end = time.time()
 
 print('Finished ' + str(attempts) + ' in ' + str((end - start)) + ' seconds') 
 print('------------')
-print(best_team)
 print('------------')
 print(best_points)
 print('------------')
 print(best_formation)
 print('------------')
 
-
-
-
-
+drawTeam(best_formation,best_team)

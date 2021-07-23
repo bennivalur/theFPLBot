@@ -1,598 +1,525 @@
-understat_id,player_name_u,team_title_u,first_name_f,fpl_id,second_name_f
-65,Timo Werner,Chelsea,Timo,117,Werner
-87,Joelinton,Newcastle United,Joelinton Cássio,340,Apolinário de Lira
-101,Allan Saint-Maximin,Newcastle United,Allan,338,Saint-Maximin
-111,Jannik Vestergaard,Southampton,Jannik,369,Vestergaard
-181,Bernd Leno,Arsenal,Bernd,8,Leno
-200,Andreas Christensen,Chelsea,Andreas,116,Christensen
-204,Granit Xhaka,Arsenal,Granit,9,Xhaka
-229,Thiago Alcántara,Liverpool,Thiago,531,Alcántara do Nascimento
-239,Pascal Groß,Brighton,Pascal,57,Groß
-314,Ilkay Gündogan,,Ilkay,271,Gündogan
-318,Pierre-Emerick Aubameyang,Arsenal,Pierre-Emerick,4,Aubameyang
-332,Joel Matip,Liverpool,Joel,246,Matip
-342,Sead Kolasinac,Arsenal,Sead,14,Kolasinac
-343,Pierre-Emile Højbjerg,Tottenham,Pierre-Emile,396,Højbjerg
-447,Kevin De Bruyne,Manchester City,Kevin,272,De Bruyne
-453,Son Heung-Min,Tottenham,Heung-Min,390,Son
-461,Matt Ritchie,,Matt,322,Ritchie
-468,Callum Wilson,Newcastle United,Callum,506,Wilson
-482,Roberto Firmino,Liverpool,Roberto,249,Firmino
-485,Mamadou Sakho,Crystal Palace,Mamadou,127,Sakho
-486,Adam Lallana,Brighton,Adam,54,Lallana
-489,James Milner,Liverpool,James,241,Milner
-492,Héctor Bellerín,Arsenal,Héctor,11,Bellerín
-496,Mohamed Elneny,Arsenal,Mohamed Naser,526,El Sayed Elneny
-500,Alex Iwobi,Everton,Alex,159,Iwobi
-501,Danny Welbeck,,Danny,588,Welbeck
-502,Olivier Giroud,,Olivier,103,Giroud
-503,Theo Walcott,,Theo,148,Walcott
-510,Joel Ward,Crystal Palace,Joel,134,Ward
-512,Scott Dann,Crystal Palace,Scott,486,Dann
-522,Wilfried Zaha,Crystal Palace,Wilfried,141,Zaha
-528,Angelo Ogbonna,West Ham,Angelo,432,Ogbonna
-531,Michail Antonio,West Ham,Michail,437,Antonio
-532,Cheikhou Kouyaté,Crystal Palace,Cheikhou,133,Kouyaté
-533,Mark Noble,West Ham,Mark,427,Noble
-534,Aaron Cresswell,West Ham,Aaron,435,Cresswell
-535,Manuel Lanzini,,Manuel,439,Lanzini
-537,Andy Carroll,Newcastle United,Andy,320,Carroll
-545,Kieran Gibbs,West Bromwich Albion,Kieran,407,Gibbs
-546,David de Gea,Manchester United,David,291,de Gea
-549,Timothy Fosu-Mensah,Manchester United,Timothy,312,Fosu-Mensah
-553,Anthony Martial,Manchester United,Anthony,303,Martial
-554,Juan Mata,,Juan,290,Mata
-556,Marcus Rashford,Manchester United,Marcus,306,Rashford
-573,Odion Ighalo,Manchester United,Odion,293,Ighalo
-579,Nathan Aké,Manchester City,Nathan,279,Aké
-585,Seamus Coleman,Everton,Seamus,152,Coleman
-586,John Stones,Manchester City,John,273,Stones
-589,James McCarthy,Crystal Palace,James,131,McCarthy
-592,Ross Barkley,Chelsea,Ross,106,Barkley
-603,Nathaniel Clyne,,Nathaniel,577,Clyne
-605,Jordan Henderson,Liverpool,Jordan,244,Henderson
-606,Christian Benteke,,Christian,132,Benteke
-614,Fernandinho,Manchester City,Fernando,266,Luiz Rosa
-618,Raheem Sterling,Manchester City,Raheem,276,Sterling
-619,Sergio Agüero,,Sergio,268,Agüero
-620,Kelechi Iheanacho,,Kelechi,233,Iheanacho
-624,Willy Caballero,,Willy,101,Caballero
-633,James McArthur,Crystal Palace,James,130,McArthur
-635,Alex McCarthy,Southampton,Alex,363,McCarthy
-637,Hugo Lloris,Tottenham,Hugo,383,Lloris
-638,Kyle Walker,Manchester City,Kyle,270,Walker
-639,Toby Alderweireld,Tottenham,Toby,386,Alderweireld
-643,Eric Dier,Tottenham,Eric,391,Dier
-644,Erik Lamela,Tottenham,Erik,387,Lamela
-645,Dele Alli,Tottenham,Bamidele,394,Alli
-647,Harry Kane,Tottenham,Harry,388,Kane
-660,Ben Davies,Tottenham,Ben,395,Davies
-661,Josh Onomah,Fulham,Josh,188,Onomah
-669,Ashley Westwood,Burnley,Ashley,89,Westwood
-672,Jordan Ayew,Crystal Palace,Jordan,140,Ayew
-675,Jack Grealish,Aston Villa,Jack,37,Grealish
-681,César Azpilicueta,Chelsea,César,102,Azpilicueta
-682,Branislav Ivanovic,,Branislav,530,Ivanovic
-688,Ruben Loftus-Cheek,Chelsea,Ruben,115,Loftus-Cheek
-695,Bertrand Traoré,,Bertrand,540,Traoré
-697,Nemanja Matic,,Nemanja,295,Matic
-699,Gary Cahill,,Gary,125,Cahill
-700,Willian,Arsenal,Willian,478,Borges Da Silva
-702,Tammy Abraham,Chelsea,Tammy,118,Abraham
-703,Fikayo Tomori,Chelsea,Fikayo,121,Tomori
-706,Lukasz Fabianski,West Ham,Lukasz,431,Fabianski
-708,Federico Fernández,Newcastle United,Federico,323,Fernández
-714,Gylfi Sigurdsson,Everton,Gylfi,150,Sigurdsson
-741,Jordan Pickford,Everton,Jordan,157,Pickford
-745,Kasper Schmeichel,Leicester,Kasper,217,Schmeichel
-748,Wes Morgan,Leicester,Wes,216,Morgan
-749,Christian Fuchs,,Christian,218,Fuchs
-750,Riyad Mahrez,,Riyad,275,Mahrez
-751,N&#039;Golo Kanté,Chelsea,N'Golo,113,Kanté
-753,Marc Albrighton,Leicester,Marc,221,Albrighton
-755,Jamie Vardy,Leicester,Jamie,224,Vardy
-757,Jeffrey Schlupp,Crystal Palace,Jeffrey,142,Schlupp
-759,Daniel Amartey,,Daniel,227,Amartey
-766,Jamaal Lascelles,Newcastle United,Jamaal,328,Lascelles
-769,Jonjo Shelvey,Newcastle United,Jonjo,321,Shelvey
-770,Ayoze Pérez,Leicester,Ayoze,229,Pérez
-771,Georginio Wijnaldum,Liverpool,Georginio,243,Wijnaldum
-772,Moussa Sissoko,Tottenham,Moussa,385,Sissoko
-773,Aleksandar Mitrovic,Fulham,Aleksandar,184,Mitrović
-775,Andros Townsend,Crystal Palace,Andros,137,Townsend
-780,Karl Darlow,Newcastle United,Karl,325,Darlow
-782,Ben Chilwell,,Benjamin,232,Chilwell
-789,Robbie Brady,Burnley,Robbie,95,Brady
-790,Nathan Redmond,Southampton,Nathan,365,Redmond
-807,Jonny Evans,,Jonny,219,Evans
-822,Patrick Bamford,Leeds,Patrick,202,Bamford
-833,Virgil van Dijk,Liverpool,Virgil,250,van Dijk
-835,Ryan Bertrand,Southampton,Ryan,362,Bertrand
-838,Sadio Mané,Liverpool,Sadio,251,Mané
-839,Shane Long,Southampton,Shane,361,Long
-842,Oriol Romeu,Southampton,Oriol,364,Romeu Vidal
-843,James Ward-Prowse,Southampton,James,370,Ward-Prowse
-844,Jay Rodriguez,Burnley,Jay,86,Rodriguez
-857,Phil Bardsley,Burnley,Phil,82,Bardsley
-876,Fabian Delph,,Fabian,149,Delph
-884,Matt Targett,Aston Villa,Matt,42,Targett
-885,Kyle Walker-Peters,Southampton,Kyle,375,Walker-Peters
-887,Erik Pieters,Burnley,Erik,83,Pieters
-888,Xherdan Shaqiri,,Xherdan,247,Shaqiri
-900,Adama Traoré,Wolverhampton Wanderers,Adama,465,Traoré
-910,Harrison Reed,Fulham,Harrison,373,Reed
-935,Kurt Zouma,Chelsea,Kurt,110,Zouma
-964,Kyle Bartley,West Bromwich Albion,Kyle,412,Bartley
-971,Harry Winks,Tottenham,Harry,397,Winks
-978,Sam Johnstone,West Bromwich Albion,Sam,417,Johnstone
-986,Danny Ings,Southampton,Danny,366,Ings
-987,Joseph Gomez,Liverpool,Joseph,260,Gomez
-1006,Luke Shaw,Manchester United,Luke,300,Shaw
-1013,Sam Field,West Bromwich Albion,Sam,423,Field
-1014,Tyler Roberts,Leeds,Tyler,206,Roberts
-1017,Matej Vydra,Burnley,Matej,93,Vydra
-1024,Tyrone Mings,Aston Villa,Tyrone,41,Mings
-1042,Tom Davies,Everton,Tom,163,Davies
-1053,Keinan Davis,Aston Villa,Keinan,50,Davis
-1208,Felipe Anderson,West Ham,Felipe Anderson,440,Pereira Gomes
-1228,Bruno Fernandes,Manchester United,Bruno Miguel,302,Borges Fernandes
-1234,Dennis Praet,Leicester,Dennis,225,Praet
-1250,Mohamed Salah,Liverpool,Mohamed,254,Salah
-1257,Alisson,Liverpool,Alisson,252,Ramses Becker
-1299,Mario Lemina,Fulham,Mario,493,Lemina
-1304,Moise Kean,Everton,Moise,169,Kean
-1379,Allan,Everton,Allan,502,Marques Loureiro
-1389,Jorginho,Chelsea,Jorge Luiz,105,Frello Filho
-1545,Emil Krafth,,Emil,333,Krafth
-1621,Marcos Alonso,Chelsea,Marcos,104,Alonso
-1653,Michael Keane,Everton,Michael,156,Keane
-1663,Johann Berg Gudmundsson,,Johann Berg,90,Gudmundsson
-1665,James Tarkowski,,James,81,Tarkowski
-1676,David Luiz,Arsenal,David,3,Luiz Moreira Marinho
-1678,Michy Batshuayi,Crystal Palace,Michy,108,Batshuayi
-1683,Ryan Fraser,Newcastle United,Ryan,507,Fraser
-1685,Ahmed Elmohamady,,Ahmed,29,El Mohamady
-1687,Harry Maguire,Manchester United,Harry,298,Maguire
-1688,Andrew Robertson,Liverpool,Andrew,255,Robertson
-1689,Jake Livermore,West Bromwich Albion,Jake,409,Livermore
-1699,Shkodran Mustafi,,Shkodran,7,Mustafi
-1719,Javier Manquillo,Newcastle United,Javier,332,Manquillo
-1726,Abdoulaye Doucouré,Everton,Abdoulaye,512,Doucouré
-1735,Jack Stephens,Southampton,Jack,367,Stephens
-1736,Oliver McBurnie,Sheffield United,Oliver,357,McBurnie
-1737,Matt Phillips,West Bromwich Albion,Matt,411,Phillips
-1738,Hal Robson-Kanu,West Bromwich Albion,Hal,408,Robson-Kanu
-1739,Eric Bailly,,Eric,310,Bailly
-1740,Paul Pogba,Manchester United,Paul,296,Pogba
-1746,Jeff Hendrick,Newcastle United,Jeff,485,Hendrick
-1747,Kevin Long,Burnley,Kevin,85,Long
-1749,Rob Holding,Arsenal,Rob,16,Holding
-1750,Ainsley Maitland-Niles,Arsenal,Ainsley,15,Maitland-Niles
-1760,Arthur Masuaku,West Ham,Arthur,442,Masuaku
-1776,Jarrod Bowen,West Ham,Jarrod,445,Bowen
-1785,Nampalys Mendy,Leicester,Nampalys,518,Mendy
-1791,Trent Alexander-Arnold,Liverpool,Trent,259,Alexander-Arnold
-1823,Lucas Digne,Everton,Lucas,155,Digne
-2164,Pablo Hernández,Leeds,Pablo,193,Hernández Domínguez
-2190,Vicente Guaita,Crystal Palace,Vicente,128,Guaita
-2249,James Rodríguez,Everton,James,508,Rodríguez
-2251,Gareth Bale,,Gareth,543,Bale
-2254,Mateo Kovacic,Chelsea,Mateo,107,Kovacic
-2310,Alphonse Areola,Fulham,Alphonse,516,Areola
-2328,Thomas Partey,,Thomas,567,Partey
-2335,Pablo Fornals,West Ham,Pablo,450,Fornals
-2379,João Cancelo,,João Pedro Cavaco,277,Cancelo
-2381,Rodrigo,Leeds,Rodrigo,492,Moreno
-2383,André Gomes,Everton,André Filipe,158,Tavares Gomes
-2385,Mat Ryan,Brighton,Mathew,70,Ryan
-2446,Dani Ceballos,Arsenal,Daniel,501,Ceballos Fernández
-2496,Rodri,Manchester City,Rodrigo,286,Hernandez
-2498,Aymeric Laporte,,Aymeric,280,Laporte
-2662,Christian Pulisic,,Christian,119,Pulisic
-2958,Oleksandr Zinchenko,,Oleksandr,283,Zinchenko
-3203,Issa Diop,West Ham,Issa,451,Diop
-3277,Alexandre Lacazette,Arsenal,Alexandre,6,Lacazette
-3288,Thiago Silva,,Thiago,490,Thiago
-3293,Lucas Moura,Tottenham,Lucas,392,Rodrigues Moura da Silva
-3294,Edinson Cavani,,Edinson,569,Cavani
-3304,Maxime Le Marchand,,Maxime,173,Le Marchand
-3389,Benjamin Mendy,Manchester City,Benjamin,274,Mendy
-3420,Fabinho,Liverpool,Fabio Henrique,253,Tavares
-3422,João Moutinho,Wolverhampton Wanderers,João Filipe Iria,454,Santos Moutinho
-3428,Hélder Costa,Leeds,Hélder Wander,205,Sousa de Azevedo e Costa
-3491,Romain Saiss,Wolverhampton Wanderers,Romain,461,Saïss
-3600,Serge Aurier,,Serge,389,Aurier
-3621,Neal Maupay,Brighton,Neal,68,Maupay
-3683,Ivan Cavaleiro,Fulham,Ivan Ricardo,187,Neves Abreu Cavaleiro
-3979,Ahmed Hegazy,,Ahmed El-Sayed,414,Hegazy
-4105,Raúl Jiménez,Wolverhampton Wanderers,Raúl,460,Jiménez
-4381,Mateusz Klich,Leeds,Mateusz,198,Klich
-4391,Darnell Furlong,West Bromwich Albion,Darnell,422,Furlong
-4401,Emiliano Martinez,Aston Villa,Emiliano,12,Martínez
-4422,Ashley Barnes,,Ashley,87,Barnes
-4456,Chris Wood,Burnley,Chris,91,Wood
-4476,Callum Robinson,West Bromwich Albion,Callum,358,Robinson
-4490,Semi Ajayi,West Bromwich Albion,Oluwasemilogo Adesewo Ibidapo,419,Ajayi
-4866,Aboubakar Kamara,Fulham,Aboubakar,190,Kamara
-5061,Kepa,Chelsea,Kepa,112,Arrizabalaga
-5220,Kai Havertz,Chelsea,Kai,500,Havertz
-5245,Bernardo,,Bernardo,75,Fernandes da Silva Junior
-5247,Naby Keita,Liverpool,Naby,261,Keita
-5256,Oliver Burke,Sheffield United,Oliver,424,Burke
-5264,Caglar Söyüncü,Leicester,Çaglar,238,Söyüncü
-5274,Michael Hector,Fulham,Michael,178,Hector
-5543,Gabriel Jesus,Manchester City,Gabriel Fernando,282,de Jesus
-5545,Wilfred Ndidi,Leicester,Wilfred,236,Ndidi
-5549,Luka Milivojevic,Crystal Palace,Luka,138,Milivojevic
-5552,Nick Pope,Burnley,Nick,96,Pope
-5553,Declan Rice,West Ham,Declan,448,Rice
-5555,Dominic Calvert-Lewin,Everton,Dominic,164,Calvert-Lewin
-5556,Ademola Lookman,,Ademola,557,Lookman
-5560,Scott McTominay,Manchester United,Scott,309,McTominay
-5562,Rekeem Harper,West Bromwich Albion,Rekeem,426,Harper
-5584,Aaron Wan-Bissaka,,Aaron,313,Wan-Bissaka
-5595,Daniel James,Manchester United,Daniel,311,James
-5603,Aaron Ramsdale,Sheffield United,Aaron,483,Ramsdale
-5609,Yves Bissouma,Brighton,Yves,76,Bissouma
-5613,Gabriel,Arsenal,Gabriel,494,Magalhães
-5656,Nicolas Pepe,Arsenal,Nicolas,18,Pépé
-5681,Giovani Lo Celso,Tottenham,Giovani,403,Lo Celso
-5708,Fernando Marçal,Wolverhampton Wanderers,Fernando,505,Marçal
-5956,Youri Tielemans,Leicester,Youri,228,Tielemans
-5962,Tanguy NDombele Alvaro,Tottenham,Tanguy,405,Ndombele
-5973,Kenny Tete,Fulham,Kenny,517,Tete
-6026,Richarlison,Everton,Richarlison,166,de Andrade
-6027,Jairo Riedewald,,Jairo,144,Riedewald
-6042,Jan Bednarek,Southampton,Jan,376,Bednarek
-6044,Charlie Taylor,Burnley,Charlie,97,Taylor
-6048,Lewis Dunk,Brighton,Lewis,62,Dunk
-6049,Solly March,Brighton,Solomon,65,March
-6051,Dale Stephens,,Dale,55,Stephens
-6054,Ederson,Manchester City,Ederson,278,Santana de Moraes
-6055,Phil Foden,Manchester City,Phil,284,Foden
-6062,Isaac Hayden,Newcastle United,Isaac,336,Hayden
-6063,Jacob Murphy,,Jacob,497,Murphy
-6080,Victor Lindelöf,Manchester United,Victor,308,Lindelöf
-6122,Douglas Luiz,Aston Villa,Douglas Luiz,52,Soares de Paulo
-6144,Sébastien Haller,West Ham,Sébastien,441,Haller
-6157,Timothy Castagne,Leicester,Timothy,498,Castagne
-6162,Cengiz Ünder,,Cengiz,541,Ünder
-6163,Nélson Semedo,,Nélson,546,Cabral Semedo
-6249,Davinson Sánchez,Tottenham,Davinson,398,Sánchez
-6273,Robin Koch,Leeds,Robin,491,Koch
-6274,Andriy Yarmolenko,West Ham,Andriy,436,Yarmolenko
-6369,Ethan Ampadu,Sheffield United,Ethan,509,Ampadu
-6382,Pedro Neto,Wolverhampton Wanderers,Pedro,474,Lomba Neto
-6424,Ben Johnson,,Ben,452,Johnson
-6434,Franck Zambo,Fulham,André-Frank,191,Zambo Anguissa
-6441,Ferrán Torres,Manchester City,Ferran,287,Torres
-6456,Callum Hudson-Odoi,Chelsea,Callum,122,Hudson-Odoi
-6477,Cenk Tosun,,Cenk,153,Tosun
-6482,Eddie Nketiah,Arsenal,Edward,22,Nketiah
-6504,Michael Obafemi,,Michael,381,Obafemi
-6521,Yerry Mina,Everton,Yerry,162,Mina
-6651,Grady Diangana,West Bromwich Albion,Grady,446,Diangana
-6665,Curtis Jones,Liverpool,Curtis,263,Jones
-6681,Harvey Barnes,Leicester,Harvey,235,Barnes
-6736,Ibrahima Diallo,,Ibrahima,565,Diallo
-6756,Dwight McNeil,Burnley,Dwight,100,McNeil
-6817,Fred,,Frederico,299,Rodrigues de Paula Santos
-6818,James Maddison,Leicester,James,231,Maddison
-6827,Bobby Reid,Fulham,Bobby,181,Decordova-Reid
-6834,Joe Bryan,Fulham,Joe,182,Bryan
-6835,Tom Cairney,Fulham,Tom,175,Cairney
-6840,Neeskens Kebano,Fulham,Neeskens,180,Kebano
-6842,Alireza Jahanbakhsh,Brighton,Alireza,71,Jahanbakhsh
-6849,Rui Patrício,Wolverhampton Wanderers,Rui Pedro,455,dos Santos Patrício
-6850,Willy Boly,Wolverhampton Wanderers,Willy,458,Boly
-6851,Conor Coady,Wolverhampton Wanderers,Conor,459,Coady
-6852,Matt Doherty,Tottenham,Matt,457,Doherty
-6853,Rúben Neves,Wolverhampton Wanderers,Rúben Diogo,466,da Silva Neves
-6854,Diogo Jota,,Diogo,468,Jota
-6856,Rúben Vinagre,Wolverhampton Wanderers,Rúben Gonçalo,471,Silva Nascimento Vinagre
-6880,Edouard Mendy,Chelsea,Edouard,548,Mendy
-6891,Ryan Fredericks,West Ham,Ryan,438,Fredericks
-6892,Fabián Balbuena,,Fabián,443,Balbuena
-6893,Stuart Armstrong,Southampton,Stuart,368,Armstrong
-7063,Bernard,,Bernard,154,Anício Caldeira Duarte
-7077,Denis Odoi,Fulham,Denis,525,Odoi
-7078,Sean Longstaff,Newcastle United,Sean,480,Longstaff
-7153,Matheus Pereira,West Bromwich Albion,Matheus,481,Pereira
-7184,Tim Ream,Fulham,Tim,176,Ream
-7187,Sergio Reguilón,,Sergio,542,Reguilón
-7236,Leander Dendoncker,Wolverhampton Wanderers,Leander,464,Dendoncker
-7298,Ben White,Brighton,Ben,74,White
-7322,Bukayo Saka,Arsenal,Bukayo,24,Saka
-7382,Dan Burn,Brighton,Dan,61,Burn
-7420,Miguel Almirón,Newcastle United,Miguel,339,Almirón
-7490,Mason Greenwood,Manchester United,Mason,315,Greenwood
-7589,Wesley Fofana,,Wesley,561,Fofana
-7689,Ben Godfrey,,Ben,566,Godfrey
-7691,Jamal Lewis,Newcastle United,Jamal,513,Lewis
-7698,Leandro Trossard,Brighton,Leandro,69,Trossard
-7699,Adam Webster,Brighton,Adam,66,Webster
-7700,Che Adams,Southampton,Che,377,Adams
-7701,Moussa Djenepo,Southampton,Moussa,382,Djenepo
-7703,John Egan,Sheffield United,John,353,Egan
-7704,Chris Basham,Sheffield United,Chris,345,Basham
-7705,Jack O&#039;Connell,Sheffield United,Jack,354,O'Connell
-7706,George Baldock,Sheffield United,George,351,Baldock
-7707,Enda Stevens,Sheffield United,Enda,347,Stevens
-7708,John Lundstram,Sheffield United,John,355,Lundstram
-7709,John Fleck,Sheffield United,John,346,Fleck
-7710,Oliver Norwood,Sheffield United,Oliver,349,Norwood
-7711,David McGoldrick,Sheffield United,David,344,McGoldrick
-7712,Billy Sharp,Sheffield United,Billy,343,Sharp
-7714,Ben Osborn,Sheffield United,Ben,356,Osborn
-7721,Conor Hourihane,Aston Villa,Conor,33,Hourihane
-7722,Trézéguet,Aston Villa,Mahmoud Ahmed,40,Ibrahim Hassan
-7723,John McGinn,Aston Villa,John,38,McGinn
-7726,Ezri Konsa Ngoyo,Aston Villa,Ezri,46,Konsa Ngoyo
-7753,James Justin,Leicester,James,239,Justin
-7768,Mason Mount,Chelsea,Mason,120,Mount
-7983,Daniel N&#039;Lundulu,,Daniel,590,N'Lundulu
-7991,Aaron Connolly,Brighton,Aaron,78,Connolly
-8020,Steven Alzate,Brighton,Steven,79,Alzate
-8040,Marvelous Nakamba,,Marvelous,44,Nakamba
-8045,Eric Garcia,,Eric,288,Garcia
-8067,Reece James,Chelsea,Reece,123,James
-8089,Kieran Tierney,Arsenal,Kieran,17,Tierney
-8150,Anthony Gordon,,Anthony,168,Gordon
-8214,Tyrick Mitchell,Crystal Palace,Tyrick,146,Mitchell
-8224,William Smallbone,Southampton,William,379,Smallbone
-8226,Tariq Lamptey,Brighton,Tariq,77,Lamptey
-8227,Oskar Buur,Wolverhampton Wanderers,Oskar,467,Buur
-8239,Takumi Minamino,Liverpool,Takumi,258,Minamino
-8285,Sander Berge,Sheffield United,Sander,360,Berge
-8286,Jack Robinson,,Jack,352,Robinson
-8288,Tomas Soucek,West Ham,Tomas,449,Soucek
-8291,Daniel Podence,Wolverhampton Wanderers,Daniel,469,Castelo Podence
-8300,Steven Bergwijn,Tottenham,Steven,400,Bergwijn
-8323,Josh Brownhill,Burnley,Josh,98,Brownhill
-8351,Ki-Jana Hoever,,Ki-Jana,545,Hoever
-8379,Alexis Mac Allister,,Alexis,80,Mac Allister
-8456,Nathan Tella,Southampton,Nathan,524,Tella
-8481,Jimmy Dunne,Burnley,Jimmy,519,Dunne
-8704,Marek Rodák,Fulham,Marek,186,Rodák
-8706,Eberechi Eze,Crystal Palace,Eberechi,489,Eze
-8715,Illan Meslier,Leeds,Illan,213,Meslier
-8716,Luke Ayling,Leeds,Luke,197,Ayling
-8717,Pascal Struijk,Leeds,Pascal,211,Struijk
-8718,Stuart Dallas,Leeds,Stuart,200,Dallas
-8719,Kalvin Phillips,Leeds,Kalvin,204,Phillips
-8720,Jack Harrison,Leeds,Jack,203,Harrison
-8721,Jamie Shackleton,Leeds,Jamie,210,Shackleton
-8722,Ezgjan Alioski,Leeds,Ezgjan,201,Alioski
-8723,Ian Poveda-Ocampo,,Ian Carlo,209,Poveda-Ocampo
-8756,Dara O&#039;Shea,West Bromwich Albion,Dara,425,O'Shea
-8757,Romaine Sawyers,West Bromwich Albion,Romaine,413,Sawyers
-8758,Kyle Edwards,West Bromwich Albion,Kyle,421,Edwards
-8777,Vitinha,Wolverhampton Wanderers,Vitor,515,Ferreira
-8778,Fabio Silva,Wolverhampton Wanderers,Fabio,504,Silva
-8816,Liam Cooper,Leeds,Liam,195,Cooper
-8821,Donny van de Beek,Manchester United,Donny,495,van de Beek
-8864,Matthew Cash,Aston Villa,Matthew,496,Cash
-8865,Ollie Watkins,Aston Villa,Ollie,514,Watkins
-8868,Liam Delap,,Liam,539,Delap
-8905,Conor Townsend,,Conor,418,Townsend
-8940,Antonee Robinson,,Antonee,484,Robinson
-8941,Jacob Ramsey,,Jacob,554,Ramsey
-8961,Ruben Dias,Manchester City,Rúben Santos,556,Gato Alves Dias
-8992,Hakim Ziyech,,Hakim,114,Ziyech
-9040,Conor Gallagher,,Conor,544,Gallagher
-,,,Mesut,1,Özil
-,,,Sokratis,2,Papastathopoulos
-,,,Cédric,5,Soares
-,,,Pablo,10,Marí
-,,,Calum,13,Chambers
-,,,Lucas,19,Torreira
-,,,Joseph,20,Willock
-,,,Reiss,21,Nelson
-,,,Emile,23,Smith Rowe
-,,,Matteo,25,Guendouzi
-,,,Gabriel Teodoro,26,Martinelli Silva
-,,,William,27,Saliba
-,,,Tom,28,Heaton
-,,,Henri,30,Lansbury
-,,,Neil,31,Taylor
-,,,Jed,32,Steer
-,,,José Ignacio,34,Peleteiro Romallo
-,,,Ørjan,35,Nyland
-,,,Bjorn,36,Engels
-,,,Kortney,39,Hause
-,,,James,43,Bree
-,,,Anwar,45,El Ghazi
-,,,Frédéric,47,Guilbert
-,,,Wesley,48,Moraes
-,,,Mbwana,49,Samatta
-,,,Indiana,51,Vassilev
-,,,Glenn,53,Murray
-,,,David,56,Button
-,,,Shane,58,Duffy
-,,,Davy,59,Pröpper
-,,,Aaron,60,Mooy
-,,,Martín,63,Montoya
-,,,Florin,64,Andone
-,,,Joël,67,Veltman
-,,,José,72,Izquierdo
-,,,Matthew,73,Clarke
-,,,Jack,84,Cork
-,,,Ben,88,Mee
-,,,Matthew,92,Lowton
-,,,Ben,94,Gibson
-,,,Bailey,99,Peacock-Farrell
-,,,Antonio,109,Rüdiger
-,,,Emerson,111,Palmieri dos Santos
-,,,Billy,124,Gilmour
-,,,Wayne,126,Hennessey
-,,,James,129,Tomkins
-,,,Martin,135,Kelly
-,,,Connor,136,Wickham
-,,,Patrick,139,van Aanholt
-,,,Max,143,Meyer
-,,,Nathan,145,Ferguson
-,,,Brandon,147,Pierrick
-,,,Jonas,151,Lössl
-,,,Jonjoe,160,Kenny
-,,,Jean-Philippe,161,Gbamin
-,,,Mason,165,Holgate
-,,,João,167,Virgínia
-,,,Jarrad,170,Branthwaite
-,,,Fabricio,171,Agosto Ramírez
-,,,Kevin,172,McDonald
-,,,Stefan,174,Johansen
-,,,Anthony,177,Knockaert
-,,,Cyrus,179,Christie
-,,,Marcus,183,Bettinelli
-,,,Alfie,185,Mawson
-,,,Jean Michaël,189,Seri
-,,,Zeze Steven,192,Sessegnon
-,,,Francisco,194,Casilla Cortés
-,,,Barry,196,Douglas
-,,,Adam,199,Forshaw
-,,,Jay-Roy,207,Grot
-,,,Kamil,208,Miazek
-,,,Jordan,212,Stevens
-,,,Leif,214,Davis
-,,,Oliver,215,Casey
-,,,Adrien,220,Silva
-,,,Matty,222,James
-,,,Danny,223,Ward
-,,,Ricardo Domingos,226,Barbosa Pereira
-,,,Demarai,230,Gray
-,,,Hamza,234,Choudhury
-,,,Filip,237,Benkovic
-,,,Luke,240,Thomas
-,,,Konstantinos,242,Tsimikas
-,,,Adrián,245,San Miguel del Castillo
-,,,Alex,248,Oxlade-Chamberlain
-,,,Divock,256,Origi
-,,,Harry,257,Wilson
-,,,Rhian,262,Brewster
-,,,Neco,264,Williams
-,,,Harvey,265,Elliott
-,,,Claudio,267,Bravo
-,,,Nicolás,269,Otamendi
-,,,Bernardo Mota,281,Veiga de Carvalho e Silva
-,,,Tommy,285,Doyle
-,,,Sergio,289,Romero
-,,,Chris,292,Smalling
-,,,Marcos,294,Rojo
-,,,Phil,297,Jones
-558,,,Jesse,301,Lingard
-,,,Andreas,304,Pereira
-,,,Dean,305,Henderson
-,,,Axel,307,Tuanzebe
-,,,José Diogo,314,Dalot Teixeira
-,,,Tahith,316,Chong
-,,,James,317,Garner
-,,,Brandon,318,Williams
-,,,Teden,319,Mengi
-,,,Ciaran,324,Clark
-,,,Martin,326,Dubravka
-,,,Florian,327,Lejeune
-,,,Dwight,329,Gayle
-,,,Christian,330,Atsu
-,,,Paul,331,Dummett
-,,,Fabian,334,Schär
-,,,DeAndre,335,Yedlin
-,,,Rolando,337,Aarons
-,,,Yoshinori,341,Muto
-,,,Kelland,342,Watts
-,,,Simon,348,Moore
-,,,Wes,350,Foderingham
-,,,Lys,359,Mousset
-,,,Angus,371,Gunn
-,,,Sofiane,372,Boufal
-,,,Josh,374,Sims
-,,,Yan,378,Valery
-,,,Jake,380,Vokins
-,,,Danny,384,Rose
-,,,Paulo,393,Gazzaniga
-,,,Ryan,399,Sessegnon
-,,,Gedson,401,Carvalho Fernandes
-,,,Japhet,402,Tanganga
-,,,Oliver,404,Skipp
-,,,Juan,406,Foyth
-,,,Kamil,410,Grosicki
-,,,Charlie,415,Austin
-,,,Kenneth,416,Zohore
-,,,Jonathan,420,Leko
-,,,Robert,428,Snodgrass
-,,,David,429,Martin
-,,,Darren,430,Randolph
-,,,Roberto,433,Jimenez Gago
-,,,Jack,434,Wilshere
-,,,Jordan,444,Hugill
-,,,Albian,447,Ajeti
-,,,John,453,Ruddy
-,,,Ryan,456,Bennett
-,,,Jonathan,462,Castro Otto
-,,,Léo,463,Bonatini
-,,,Max,470,Kilman
-,,,Matija,472,Sarkic
-,,,Morgan,473,Gibbs-White
-,,,Bruno André,475,Cavaco Jordao
-,,,Leonardo,476,Campana
-,,,Luke,477,Freeman
-,,,Mohammed,479,Salisu
-,,,Joe,482,Hart
-,,,Matthew,487,Longstaff
-,,,Mark,488,Gillespie
-,,,Cedric,499,Kipre
-,,,Christian,503,Walton
-,,,Jayden,510,Bogle
-,,,Max,511,Lowe
-,,,Bobby,520,Thomas
-,,,Cameron,521,Carter-Vickers
-,,,Sam,522,Woods
-,,,Fraser,523,Forster
-,,,Matt,527,Macey
-,,,Jason,528,Steele
-,,,Phil,529,Jagielka
-,,,Elia,532,Caprile
-,,,Mateusz,533,Bogusz
-,,,Ryan,534,Inniss
-,,,Josh,535,Benson
-,,,Anthony,536,Driscoll-Glennon
-,,,Adrián,537,Bernabé
-,,,Zack,538,Steffen
-,,,Rúnar Alex,547,Rúnarsson
-,,,Diego,549,Llorente
-,,,Jayson,550,Molumby
-,,,Mace,551,Goodridge
-,,,Cole,552,Palmer
-,,,Meritan,553,Shabani
-,,,Filip,555,Krovinovic
-,,,Vladimir,558,Coufal
-,,,Niels,559,Nkounkou
-,,,Caoimhin,560,Kelleher
-,,,Ola,562,Aina
-,,,Rayan,563,Ait Nouri
-,,,Carlos Vinicius,564,Alves Morais
-,,,Alex Nicolao,568,Telles
-,,,Raphael,570,Dias Belloli
-,,,Joachim,571,Andersen
-,,,Tosin,572,Adarabioyo
-,,,Robin,573,Olsen
-,,,Andi,574,Zeqiri
-,,,Facundo,575,Pellistri
-,,,Craig,576,Dawson
-,,,Stephen,578,Henderson
-,,,Islam,579,Slimani
-,,,Michael,580,Verrips
-,,,Owen,581,Otasowie
-,,,Karlan,582,Grant
-,,,Will,583,Norris
-,,,Joe,584,Rodon
-,,,Terence,585,Kongolo
-,,,Jack,586,Butland
-,,,Saïd,587,Benrahma
-,,,Nathaniel,589,Phillips
-,,,Max,591,Thompson
-,,,Lewis,592,Richardson
-,,,Karlo,593,Ziger
-,,,Rhys,594,Williams
-,,,James,595,Trafford
-,,,Ellis,596,Simms
-,,,Robert,597,Sánchez
+understat_id,player_namu,team_title_u,fpl_id,first_name_f,second_name_f,team
+3277,Alexandre Lacazette,Arsenal,6,Alexandre,Lacazette,1
+181,Bernd Leno,Arsenal,1,Bernd,Leno,1
+7322,Bukayo Saka,Arsenal,22,Bukayo,Saka,1
+508,Calum Chambers,Arsenal,10,Calum,Chambers,1
+847,Cédric Soares,Arsenal,5,Cédric,Soares,1
+2446,Dani Ceballos,Arsenal,,,,
+1676,David Luiz,Arsenal,,,,
+6482,Eddie Nketiah,Arsenal,20,Edward,Nketiah,1
+7230,Emile Smith-Rowe,Arsenal,21,Emile,Smith Rowe,1
+5613,Gabriel,Arsenal,23,Gabriel,Magalhães,1
+7752,Gabriel Martinelli,Arsenal,26,Gabriel Teodoro,Martinelli Silva,1
+204,Granit Xhaka,Arsenal,7,Granit,Xhaka,1
+492,Héctor Bellerín,Arsenal,9,Héctor,Bellerín,1
+8089,Kieran Tierney,Arsenal,16,Kieran,Tierney,1
+2517,Martin Odegaard,Arsenal,,,,
+496,Mohamed Elneny,Arsenal,12,Mohamed Naser,El Sayed Elneny,1
+5656,Nicolas Pepe,Arsenal,17,Nicolas,Pépé,1
+8380,Pablo Marí,Arsenal,8,Pablo,Marí,1
+318,Pierre-Emerick Aubameyang,Arsenal,4,Pierre-Emerick,Aubameyang,1
+6492,Reiss Nelson,Arsenal,,,,
+1749,Rob Holding,Arsenal,14,Rob,Holding,1
+6875,Rúnar Alex Rúnarsson,Arsenal,2,Rúnar Alex,Rúnarsson,1
+342,Sead Kolasinac,Arsenal,11,Sead,Kolasinac,1
+1699,Shkodran Mustafi,Arsenal,,,,
+2328,Thomas Partey,Arsenal,15,Thomas,Partey,1
+700,Willian,Arsenal,3,Willian,Borges Da Silva,1
+2385,Mat Ryan,"Arsenal,Brighton",,,,
+6630,Joe Willock,"Arsenal,Newcastle United",19,Joseph,Willock,1
+1750,Ainsley Maitland-Niles,"Arsenal,West Bromwich Albion",13,Ainsley,Maitland-Niles,1
+1685,Ahmed Elmohamady,Aston Villa,,,,
+5612,Anwar El Ghazi,Aston Villa,42,Anwar,El Ghazi,2
+695,Bertrand Traoré,Aston Villa,32,Bertrand,Traoré,2
+9356,Carney Chukwuemeka,Aston Villa,,,,
+7721,Conor Hourihane,Aston Villa,29,Conor,Hourihane,2
+6122,Douglas Luiz,Aston Villa,50,Douglas Luiz,Soares de Paulo,2
+4401,Emiliano Martinez,Aston Villa,30,Emiliano,Martínez,2
+7726,Ezri Konsa Ngoyo,Aston Villa,45,Ezri,Konsa Ngoyo,2
+675,Jack Grealish,Aston Villa,33,Jack,Grealish,2
+8941,Jacob Ramsey,Aston Villa,51,Jacob,Ramsey,2
+9415,Jaden Philogene-Bidace,Aston Villa,,,,
+7723,John McGinn,Aston Villa,35,John,McGinn,2
+1053,Keinan Davis,Aston Villa,49,Keinan,Davis,2
+6859,Kortney Hause,Aston Villa,36,Kortney,Hause,2
+8040,Marvelous Nakamba,Aston Villa,41,Marvelous,Nakamba,2
+884,Matt Targett,Aston Villa,39,Matt,Targett,2
+8864,Matthew Cash,Aston Villa,44,Matthew,Cash,2
+3696,Morgan Sanson,Aston Villa,34,Morgan,Sanson,2
+710,Neil Taylor,Aston Villa,,,,
+8865,Ollie Watkins,Aston Villa,40,Ollie,Watkins,2
+7722,Trézéguet,Aston Villa,,,,
+1024,Tyrone Mings,Aston Villa,38,Tyrone,Mings,2
+7724,Wesley,Aston Villa,47,Wesley,Moraes,2
+592,Ross Barkley,"Aston Villa,Chelsea",124,Ross,Barkley,6
+7991,Aaron Connolly,Brighton,72,Aaron,Connolly,4
+486,Adam Lallana,Brighton,53,Adam,Lallana,4
+7699,Adam Webster,Brighton,61,Adam,Webster,4
+8379,Alexis Mac Allister,Brighton,74,Alexis,Mac Allister,4
+6842,Alireza Jahanbakhsh,Brighton,66,Alireza,Jahanbakhsh,4
+9099,Andi Zeqiri,Brighton,,,,
+7298,Ben White,Brighton,67,Ben,White,4
+5245,Bernardo,Brighton,68,Bernardo,Fernandes Da Silva Junior,4
+7382,Dan Burn,Brighton,58,Dan,Burn,4
+501,Danny Welbeck,Brighton,447,Danny,Welbeck,4
+6050,Davy Pröpper,Brighton,57,Davy,Pröpper,4
+9284,Jakub Moder,Brighton,75,Jakub,Moder,4
+6350,Jayson Molumby,Brighton,,,,
+8780,Joël Veltman,Brighton,62,Joël,Veltman,4
+6231,José Izquierdo,Brighton,,,,
+7698,Leandro Trossard,Brighton,64,Leandro,Trossard,4
+6048,Lewis Dunk,Brighton,59,Lewis,Dunk,4
+3621,Neal Maupay,Brighton,63,Neal,Maupay,4
+239,Pascal Groß,Brighton,55,Pascal,Groß,4
+9249,Percy Tau,Brighton,,,,
+9250,Reda Khadra,Brighton,,,,
+9098,Robert Sánchez,Brighton,69,Robert,Sánchez,4
+6049,Solly March,Brighton,,,,
+8020,Steven Alzate,Brighton,73,Steven,Alzate,4
+8226,Tariq Lamptey,Brighton,71,Tariq,Lamptey,4
+5609,Yves Bissouma,Brighton,70,Yves,Bissouma,4
+4422,Ashley Barnes,Burnley,105,Ashley,Barnes,5
+669,Ashley Westwood,Burnley,107,Ashley,Westwood,5
+8482,Bailey Peacock-Farrell,Burnley,117,Bailey,Peacock-Farrell,5
+1654,Ben Mee,Burnley,106,Ben,Mee,5
+6044,Charlie Taylor,Burnley,113,Charlie,Taylor,5
+4456,Chris Wood,Burnley,109,Chris,Wood,5
+6051,Dale Stephens,Burnley,102,Dale,Stephens,5
+6756,Dwight McNeil,Burnley,118,Dwight,McNeil,5
+887,Erik Pieters,Burnley,100,Erik,Pieters,5
+712,Jack Cork,Burnley,101,Jack,Cork,5
+1665,James Tarkowski,Burnley,98,James,Tarkowski,5
+844,Jay Rodriguez,Burnley,104,Jay,Rodriguez,5
+8481,Jimmy Dunne,Burnley,,,,
+8566,Joel Mumbongo,Burnley,,,,
+1663,Johann Berg Gudmundsson,Burnley,108,Johann Berg,Gudmundsson,5
+7383,Josh Benson,Burnley,116,Josh,Benson,5
+8323,Josh Brownhill,Burnley,115,Josh,Brownhill,5
+1747,Kevin Long,Burnley,103,Kevin,Long,5
+9082,Lewis Richardson,Burnley,,,,
+1017,Matej Vydra,Burnley,111,Matej,Vydra,5
+1652,Matthew Lowton,Burnley,110,Matthew,Lowton,5
+5552,Nick Pope,Burnley,112,Nick,Pope,5
+857,Phil Bardsley,Burnley,99,Phil,Bardsley,5
+789,Robbie Brady,Burnley,,,,
+7459,Will Norris,Burnley,114,Will,Norris,5
+200,Andreas Christensen,Chelsea,133,Andreas,Christensen,6
+1822,Antonio Rüdiger,Chelsea,127,Antonio,Rüdiger,6
+782,Ben Chilwell,Chelsea,135,Benjamin,Chilwell,6
+7988,Billy Gilmour,Chelsea,145,Billy,Gilmour,6
+6456,Callum Hudson-Odoi,Chelsea,140,Callum,Hudson-Odoi,6
+681,César Azpilicueta,Chelsea,119,César,Azpilicueta,6
+2662,Christian Pulisic,Chelsea,137,Christian,Pulisic,6
+6880,Edouard Mendy,Chelsea,143,Edouard,Mendy,6
+1245,Emerson,Chelsea,,,,
+703,Fikayo Tomori,Chelsea,,,,
+8992,Hakim Ziyech,Chelsea,131,Hakim,Ziyech,6
+1389,Jorginho,Chelsea,123,Jorge Luiz,Frello Filho,6
+5220,Kai Havertz,Chelsea,141,Kai,Havertz,6
+5061,Kepa,Chelsea,129,Kepa,Arrizabalaga,6
+935,Kurt Zouma,Chelsea,128,Kurt,Zouma,6
+1621,Marcos Alonso,Chelsea,122,Marcos,Alonso,6
+7768,Mason Mount,Chelsea,138,Mason,Mount,6
+2254,Mateo Kovacic,Chelsea,125,Mateo,Kovacic,6
+751,N&#039;Golo Kanté,Chelsea,130,N'Golo,Kanté,6
+502,Olivier Giroud,Chelsea,120,Olivier,Giroud,6
+8067,Reece James,Chelsea,142,Reece,James,6
+702,Tammy Abraham,Chelsea,136,Tammy,Abraham,6
+3288,Thiago Silva,Chelsea,121,Thiago,Thiago,6
+65,Timo Werner,Chelsea,134,Timo,Werner,6
+624,Willy Caballero,Chelsea,,,,
+688,Ruben Loftus-Cheek,"Chelsea,Fulham",132,Ruben,Loftus-Cheek,6
+775,Andros Townsend,Crystal Palace,,,,
+532,Cheikhou Kouyaté,Crystal Palace,150,Cheikhou,Kouyaté,7
+606,Christian Benteke,Crystal Palace,149,Christian,Benteke,7
+8706,Eberechi Eze,Crystal Palace,160,Eberechi,Eze,7
+699,Gary Cahill,Crystal Palace,,,,
+856,Jack Butland,Crystal Palace,156,Jack,Butland,7
+6027,Jairo Riedewald,Crystal Palace,157,Jairo,Riedewald,7
+633,James McArthur,Crystal Palace,148,James,McArthur,7
+589,James McCarthy,Crystal Palace,,,,
+530,James Tomkins,Crystal Palace,147,James,Tomkins,7
+5735,Jean-Philippe Mateta,Crystal Palace,159,Jean-Philippe,Mateta,7
+757,Jeffrey Schlupp,Crystal Palace,155,Jeffrey,Schlupp,7
+510,Joel Ward,Crystal Palace,,,,
+672,Jordan Ayew,Crystal Palace,153,Jordan,Ayew,7
+5549,Luka Milivojevic,Crystal Palace,152,Luka,Milivojevic,7
+485,Mamadou Sakho,Crystal Palace,,,,
+525,Martin Kelly,Crystal Palace,151,Martin,Kelly,7
+1678,Michy Batshuayi,Crystal Palace,126,Michy,Batshuayi,6
+603,Nathaniel Clyne,Crystal Palace,,,,
+730,Patrick van Aanholt,Crystal Palace,,,,
+512,Scott Dann,Crystal Palace,,,,
+8214,Tyrick Mitchell,Crystal Palace,162,Tyrick,Mitchell,7
+2190,Vicente Guaita,Crystal Palace,146,Vicente,Guaita,7
+522,Wilfried Zaha,Crystal Palace,154,Wilfried,Zaha,7
+1726,Abdoulaye Doucouré,Everton,173,Abdoulaye,Doucouré,8
+500,Alex Iwobi,Everton,174,Alex,Iwobi,8
+1379,Allan,Everton,171,Allan,Marques Loureiro,8
+2383,André Gomes,Everton,172,André Filipe,Tavares Gomes,8
+8150,Anthony Gordon,Everton,,,,
+7689,Ben Godfrey,Everton,179,Ben,Godfrey,8
+7063,Bernard,Everton,167,Bernard,Anício Caldeira Duarte,8
+6477,Cenk Tosun,Everton,,,,
+5555,Dominic Calvert-Lewin,Everton,177,Dominic,Calvert-Lewin,8
+876,Fabian Delph,Everton,163,Fabian,Delph,8
+714,Gylfi Sigurdsson,Everton,164,Gylfi,Sigurdsson,8
+2249,James Rodríguez,Everton,166,James,Rodríguez,8
+4764,Jean-Philippe Gbamin,Everton,,,,
+8366,João Virgínia,Everton,181,João,Virgínia,8
+1084,Jonjoe Kenny,Everton,,,,
+741,Jordan Pickford,Everton,170,Jordan,Pickford,8
+465,Joshua King,Everton,,,,
+1823,Lucas Digne,Everton,168,Lucas,Digne,8
+985,Mason Holgate,Everton,178,Mason,Holgate,8
+1653,Michael Keane,Everton,169,Michael,Keane,8
+1304,Moise Kean,Everton,,,,
+9406,Nathan Broadhead,Everton,,,,
+8109,Niels Nkounkou,Everton,,,,
+6026,Richarlison,Everton,180,Richarlison,de Andrade,8
+6962,Robin Olsen,Everton,,,,
+585,Seamus Coleman,Everton,165,Seamus,Coleman,8
+1042,Tom Davies,Everton,176,Tom,Davies,8
+6521,Yerry Mina,Everton,175,Yerry,Mina,8
+503,Theo Walcott,"Everton,Southampton",,,,
+4866,Aboubakar Kamara,Fulham,,,,
+5556,Ademola Lookman,Fulham,,,,
+773,Aleksandar Mitrovic,Fulham,,,,
+2310,Alphonse Areola,Fulham,,,,
+8940,Antonee Robinson,Fulham,,,,
+6827,Bobby Reid,Fulham,,,,
+7077,Denis Odoi,Fulham,,,,
+9501,Fabio Carvalho,Fulham,,,,
+6434,Franck Zambo,Fulham,,,,
+910,Harrison Reed,Fulham,,,,
+3683,Ivan Cavaleiro,Fulham,,,,
+6314,Joachim Andersen,Fulham,,,,
+6834,Joe Bryan,Fulham,,,,
+5587,Josh Maja,Fulham,,,,
+661,Josh Onomah,Fulham,,,,
+5973,Kenny Tete,Fulham,,,,
+8704,Marek Rodák,Fulham,,,,
+1299,Mario Lemina,Fulham,,,,
+3304,Maxime Le Marchand,Fulham,,,,
+5274,Michael Hector,Fulham,,,,
+6840,Neeskens Kebano,Fulham,,,,
+725,Ola Aina,Fulham,,,,
+6067,Terence Kongolo,Fulham,,,,
+7184,Tim Ream,Fulham,,,,
+6835,Tom Cairney,Fulham,,,,
+5590,Tosin Adarabioyo,Fulham,,,,
+9552,Tyrese Francois,Fulham,,,,
+2163,Diego Llorente,Leeds,190,Diego,Llorente,10
+8722,Ezgjan Alioski,Leeds,,,,
+9423,Gaetano Berardi,Leeds,,,,
+3428,Hélder Costa,Leeds,192,Hélder Wander,Sousa de Azevedo e Costa,10
+8723,Ian Poveda-Ocampo,Leeds,195,Ian Carlo,Poveda-Ocampo,10
+8715,Illan Meslier,Leeds,199,Illan,Meslier,10
+8720,Jack Harrison,Leeds,267,Jack,Harrison,12
+8721,Jamie Shackleton,Leeds,197,Jamie,Shackleton,10
+8719,Kalvin Phillips,Leeds,191,Kalvin,Phillips,10
+2259,Kiko Casilla,Leeds,,,,
+8919,Leif Davis,Leeds,,,,
+8816,Liam Cooper,Leeds,184,Liam,Cooper,10
+8716,Luke Ayling,Leeds,185,Luke,Ayling,10
+4381,Mateusz Klich,Leeds,186,Mateusz,Klich,10
+9219,Niall Huggins,Leeds,,,,
+2164,Pablo Hernández,Leeds,182,Pablo,Hernández Domínguez,10
+8717,Pascal Struijk,Leeds,198,Pascal,Struijk,10
+822,Patrick Bamford,Leeds,189,Patrick,Bamford,10
+8026,Raphinha,Leeds,196,Raphael,Dias Belloli,10
+6273,Robin Koch,Leeds,194,Robin,Koch,10
+2381,Rodrigo,Leeds,187,Rodrigo,Moreno,10
+8718,Stuart Dallas,Leeds,188,Stuart,Dallas,10
+1014,Tyler Roberts,Leeds,193,Tyler,Roberts,10
+770,Ayoze Pérez,Leicester,211,Ayoze,Pérez,9
+5264,Caglar Söyüncü,Leicester,217,Çaglar,Söyüncü,9
+6162,Cengiz Ünder,Leicester,,,,
+749,Christian Fuchs,Leicester,,,,
+759,Daniel Amartey,Leicester,208,Daniel,Amartey,9
+762,Demarai Gray,Leicester,,,,
+1234,Dennis Praet,Leicester,206,Dennis,Praet,9
+6418,Hamza Choudhury,Leicester,214,Hamza,Choudhury,9
+6681,Harvey Barnes,Leicester,215,Harvey,Barnes,9
+1682,Islam Slimani,Leicester,,,,
+7753,James Justin,Leicester,218,James,Justin,9
+6818,James Maddison,Leicester,212,James,Maddison,9
+755,Jamie Vardy,Leicester,205,Jamie,Vardy,9
+807,Jonny Evans,Leicester,201,Jonny,Evans,9
+745,Kasper Schmeichel,Leicester,200,Kasper,Schmeichel,9
+620,Kelechi Iheanacho,Leicester,213,Kelechi,Iheanacho,9
+8562,Luke Thomas,Leicester,219,Luke,Thomas,9
+753,Marc Albrighton,Leicester,202,Marc,Albrighton,9
+1785,Nampalys Mendy,Leicester,203,Nampalys,Mendy,9
+3303,Ricardo Pereira,Leicester,207,Ricardo Domingos,Barbosa Pereira,9
+9395,Sidnei Tavares,Leicester,,,,
+9311,Thakgalo Leshabela,Leicester,,,,
+6157,Timothy Castagne,Leicester,209,Timothy,Castagne,9
+748,Wes Morgan,Leicester,,,,
+7589,Wesley Fofana,Leicester,220,Wesley,Fofana,9
+5545,Wilfred Ndidi,Leicester,216,Wilfred,Ndidi,9
+5956,Youri Tielemans,Leicester,210,Youri,Tielemans,9
+527,Adrián,Liverpool,223,Adrián,San Miguel del Castillo,11
+966,Alex Oxlade-Chamberlain,Liverpool,227,Alex,Oxlade-Chamberlain,11
+1257,Alisson,Liverpool,231,Alisson,Ramses Becker,11
+1688,Andrew Robertson,Liverpool,234,Andrew,Robertson,11
+7904,Caoimhin Kelleher,Liverpool,242,Caoimhin,Kelleher,11
+6665,Curtis Jones,Liverpool,244,Curtis,Jones,11
+6854,Diogo Jota,Liverpool,240,Diogo,Jota,11
+484,Divock Origi,Liverpool,235,Divock,Origi,11
+3420,Fabinho,Liverpool,232,Fabio Henrique,Tavares,11
+771,Georginio Wijnaldum,Liverpool,,,,
+489,James Milner,Liverpool,221,James,Milner,11
+332,Joel Matip,Liverpool,224,Joel,Matip,11
+605,Jordan Henderson,Liverpool,222,Jordan,Henderson,11
+987,Joseph Gomez,Liverpool,238,Joseph,Gomez,11
+8852,Konstantinos Tsimikas,Liverpool,245,Konstantinos,Tsimikas,11
+1250,Mohamed Salah,Liverpool,233,Mohamed,Salah,11
+5247,Naby Keita,Liverpool,239,Naby,Keita,11
+8228,Nathaniel Phillips,Liverpool,241,Nathaniel,Phillips,11
+8204,Neco Williams,Liverpool,246,Neco,Williams,11
+7376,Ozan Kabak,Liverpool,,,,
+9086,Rhys Williams,Liverpool,247,Rhys,Williams,11
+482,Roberto Firmino,Liverpool,228,Roberto,Firmino,11
+838,Sadio Mané,Liverpool,230,Sadio,Mané,11
+229,Thiago Alcántara,Liverpool,225,Thiago,Alcántara do Nascimento,11
+1791,Trent Alexander-Arnold,Liverpool,237,Trent,Alexander-Arnold,11
+833,Virgil van Dijk,Liverpool,229,Virgil,van Dijk,11
+888,Xherdan Shaqiri,Liverpool,226,Xherdan,Shaqiri,11
+8239,Takumi Minamino,"Liverpool,Southampton",236,Takumi,Minamino,11
+2498,Aymeric Laporte,Manchester City,259,Aymeric,Laporte,12
+3389,Benjamin Mendy,Manchester City,253,Benjamin,Mendy,12
+3635,Bernardo Silva,Manchester City,261,Bernardo Mota,Veiga de Carvalho e Silva,12
+6054,Ederson,Manchester City,257,Ederson,Santana de Moraes,12
+8045,Eric Garcia,Manchester City,,,,
+614,Fernandinho,Manchester City,453,Fernando,Luiz Rosa,12
+6441,Ferrán Torres,Manchester City,268,Ferran,Torres,12
+5543,Gabriel Jesus,Manchester City,263,Gabriel Fernando,de Jesus,12
+314,Ilkay Gündogan,Manchester City,250,Ilkay,Gündogan,12
+2379,João Cancelo,Manchester City,256,João Pedro Cavaco,Cancelo,12
+586,John Stones,Manchester City,252,John,Stones,12
+447,Kevin De Bruyne,Manchester City,251,Kevin,De Bruyne,12
+638,Kyle Walker,Manchester City,249,Kyle,Walker,12
+8868,Liam Delap,Manchester City,,,,
+579,Nathan Aké,Manchester City,258,Nathan,Aké,12
+2958,Oleksandr Zinchenko,Manchester City,264,Oleksandr,Zinchenko,12
+6055,Phil Foden,Manchester City,265,Phil,Foden,12
+618,Raheem Sterling,Manchester City,255,Raheem,Sterling,12
+750,Riyad Mahrez,Manchester City,254,Riyad,Mahrez,12
+2496,Rodri,Manchester City,266,Rodrigo,Hernandez,12
+8961,Rúben Dias,Manchester City,262,Rúben Santos,Gato Alves Dias,12
+8158,Scott Carson,Manchester City,,,,
+619,Sergio Agüero,Manchester City,,,,
+7817,Zack Steffen,Manchester City,260,Zack,Steffen,12
+5584,Aaron Wan-Bissaka,Manchester United,288,Aaron,Wan-Bissaka,13
+1828,Alex Telles,Manchester United,279,Alex Nicolao,Telles,13
+8127,Amad Diallo Traore,Manchester United,,,,
+9524,Anthony Elanga,Manchester United,,,,
+553,Anthony Martial,Manchester United,278,Anthony,Martial,13
+934,Axel Tuanzebe,Manchester United,283,Axel,Tuanzebe,13
+8075,Brandon Williams,Manchester United,290,Brandon,Williams,13
+1228,Bruno Fernandes,Manchester United,277,Bruno Miguel,Borges Fernandes,13
+5595,Daniel James,Manchester United,287,Daniel,James,13
+546,David de Gea,Manchester United,270,David,de Gea,13
+7702,Dean Henderson,Manchester United,280,Dean,Henderson,13
+8821,Donny van de Beek,Manchester United,282,Donny,van de Beek,13
+3294,Edinson Cavani,Manchester United,269,Edinson,Cavani,13
+1739,Eric Bailly,Manchester United,286,Eric,Bailly,13
+6817,Fred,Manchester United,274,Frederico,Rodrigues de Paula Santos,13
+9558,Hannibal Mejbri,Manchester United,,,,
+1687,Harry Maguire,Manchester United,273,Harry,Maguire,13
+554,Juan Mata,Manchester United,,,,
+1006,Luke Shaw,Manchester United,275,Luke,Shaw,13
+556,Marcus Rashford,Manchester United,281,Marcus,Rashford,13
+7490,Mason Greenwood,Manchester United,289,Mason,Greenwood,13
+697,Nemanja Matic,Manchester United,271,Nemanja,Matic,13
+573,Odion Ighalo,Manchester United,,,,
+1740,Paul Pogba,Manchester United,272,Paul,Pogba,13
+5560,Scott McTominay,Manchester United,285,Scott,McTominay,13
+9359,Shola Shoretire,Manchester United,,,,
+549,Timothy Fosu-Mensah,Manchester United,,,,
+6080,Victor Lindelöf,Manchester United,284,Victor,Lindelöf,13
+9557,William Fish,Manchester United,,,,
+101,Allan Saint-Maximin,Newcastle United,307,Allan,Saint-Maximin,14
+537,Andy Carroll,Newcastle United,,,,
+468,Callum Wilson,Newcastle United,296,Callum,Wilson,14
+875,Ciaran Clark,Newcastle United,293,Ciaran,Clark,14
+727,DeAndre Yedlin,Newcastle United,,,,
+743,Dwight Gayle,Newcastle United,300,Dwight,Gayle,14
+9154,Elliot Anderson,Newcastle United,,,,
+1545,Emil Krafth,Newcastle United,303,Emil,Krafth,14
+76,Fabian Schär,Newcastle United,305,Fabian,Schär,14
+708,Federico Fernández,Newcastle United,,,,
+6062,Isaac Hayden,Newcastle United,306,Isaac,Hayden,14
+6063,Jacob Murphy,Newcastle United,304,Jacob,Murphy,14
+766,Jamaal Lascelles,Newcastle United,299,Jamaal,Lascelles,14
+7691,Jamal Lewis,Newcastle United,311,Jamal,Lewis,14
+1719,Javier Manquillo,Newcastle United,302,Javier,Manquillo,14
+1746,Jeff Hendrick,Newcastle United,297,Jeff,Hendrick,14
+87,Joelinton,Newcastle United,310,Joelinton Cássio,Apolinário de Lira,14
+769,Jonjo Shelvey,Newcastle United,291,Jonjo,Shelvey,14
+780,Karl Darlow,Newcastle United,294,Karl,Darlow,14
+6532,Martin Dubravka,Newcastle United,295,Martin,Dubravka,14
+461,Matt Ritchie,Newcastle United,292,Matt,Ritchie,14
+8016,Matthew Longstaff,Newcastle United,312,Matthew,Longstaff,14
+7420,Miguel Almirón,Newcastle United,308,Miguel,Almirón,14
+853,Paul Dummett,Newcastle United,301,Paul,Dummett,14
+1683,Ryan Fraser,Newcastle United,298,Ryan,Fraser,14
+7078,Sean Longstaff,Newcastle United,309,Sean,Longstaff,14
+5603,Aaron Ramsdale,Sheffield United,,,,
+9222,Antwoine Hackford,Sheffield United,,,,
+7714,Ben Osborn,Sheffield United,,,,
+7712,Billy Sharp,Sheffield United,,,,
+7704,Chris Basham,Sheffield United,,,,
+9509,Daniel Jebbison,Sheffield United,,,,
+7711,David McGoldrick,Sheffield United,,,,
+7707,Enda Stevens,Sheffield United,,,,
+6369,Ethan Ampadu,Sheffield United,139,Ethan,Ampadu,6
+9540,Femi Seriki,Sheffield United,,,,
+7706,George Baldock,Sheffield United,,,,
+9307,Iliman Ndiaye,Sheffield United,,,,
+7705,Jack O&#039;Connell,Sheffield United,,,,
+8286,Jack Robinson,Sheffield United,,,,
+9205,Jayden Bogle,Sheffield United,,,,
+7703,John Egan,Sheffield United,,,,
+7709,John Fleck,Sheffield United,,,,
+7708,John Lundstram,Sheffield United,,,,
+9163,Kean Bryan,Sheffield United,,,,
+1748,Lys Mousset,Sheffield United,,,,
+8918,Max Lowe,Sheffield United,,,,
+5256,Oliver Burke,Sheffield United,,,,
+1736,Oliver McBurnie,Sheffield United,,,,
+7710,Oliver Norwood,Sheffield United,,,,
+587,Phil Jagielka,Sheffield United,,,,
+5569,Rhian Brewster,Sheffield United,,,,
+8285,Sander Berge,Sheffield United,,,,
+635,Alex McCarthy,Southampton,334,Alex,McCarthy,16
+8511,Alexandre Jankewitz,Southampton,,,,
+9257,Allan Tchaptchet,Southampton,,,,
+9256,Caleb Watts,Southampton,,,,
+7700,Che Adams,Southampton,345,Che,Adams,16
+7983,Daniel N&#039;Lundulu,Southampton,344,Daniel,N'Lundulu,16
+986,Danny Ings,Southampton,337,Danny,Ings,16
+831,Fraser Forster,Southampton,333,Fraser,Forster,16
+6736,Ibrahima Diallo,Southampton,349,Ibrahima,Diallo,16
+1735,Jack Stephens,Southampton,338,Jack,Stephens,16
+8493,Jake Vokins,Southampton,,,,
+843,James Ward-Prowse,Southampton,341,James,Ward-Prowse,16
+6042,Jan Bednarek,Southampton,343,Jan,Bednarek,16
+111,Jannik Vestergaard,Southampton,340,Jannik,Vestergaard,16
+7326,Kayne Ramsay,Southampton,,,,
+885,Kyle Walker-Peters,Southampton,342,Kyle,Walker-Peters,16
+6504,Michael Obafemi,Southampton,348,Michael,Obafemi,16
+6923,Mohammed Salisu,Southampton,351,Mohammed,Salisu,16
+7701,Moussa Djenepo,Southampton,350,Moussa,Djenepo,16
+790,Nathan Redmond,Southampton,336,Nathan,Redmond,16
+8456,Nathan Tella,Southampton,346,Nathan,Tella,16
+842,Oriol Romeu,Southampton,335,Oriol,Romeu Vidal,16
+835,Ryan Bertrand,Southampton,,,,
+839,Shane Long,Southampton,,,,
+6893,Stuart Armstrong,Southampton,339,Stuart,Armstrong,16
+8224,William Smallbone,Southampton,347,William,Smallbone,16
+7280,Yan Valery,Southampton,,,,
+660,Ben Davies,Tottenham,364,Ben,Davies,17
+7395,Carlos Vinicius,Tottenham,,,,
+9332,Dane Scarlett,Tottenham,,,,
+6249,Davinson Sánchez,Tottenham,367,Davinson,Sánchez,17
+645,Dele Alli,Tottenham,363,Bamidele,Alli,17
+643,Eric Dier,Tottenham,361,Eric,Dier,17
+644,Erik Lamela,Tottenham,356,Erik,Lamela,17
+2251,Gareth Bale,Tottenham,,,,
+5681,Giovani Lo Celso,Tottenham,372,Giovani,Lo Celso,17
+647,Harry Kane,Tottenham,357,Harry,Kane,17
+971,Harry Winks,Tottenham,366,Harry,Winks,17
+637,Hugo Lloris,Tottenham,353,Hugo,Lloris,17
+8222,Japhet Tanganga,Tottenham,371,Japhet,Tanganga,17
+6377,Joe Rodon,Tottenham,374,Joe,Rodon,17
+3293,Lucas Moura,Tottenham,362,Lucas,Rodrigues Moura da Silva,17
+6852,Matt Doherty,Tottenham,360,Matt,Doherty,17
+772,Moussa Sissoko,Tottenham,354,Moussa,Sissoko,17
+343,Pierre-Emile Højbjerg,Tottenham,365,Pierre-Emile,Højbjerg,17
+3600,Serge Aurier,Tottenham,358,Serge,Aurier,17
+7187,Sergio Reguilón,Tottenham,370,Sergio,Reguilón,17
+453,Son Heung-Min,Tottenham,359,Heung-Min,Son,17
+8300,Steven Bergwijn,Tottenham,369,Steven,Bergwijn,17
+5962,Tanguy NDombele Alvaro,Tottenham,375,Tanguy,Ndombele,17
+639,Toby Alderweireld,Tottenham,355,Toby,Alderweireld,17
+3979,Ahmed Hegazy,West Bromwich Albion,,,,
+682,Branislav Ivanovic,West Bromwich Albion,,,,
+4476,Callum Robinson,West Bromwich Albion,,,,
+848,Charlie Austin,West Bromwich Albion,,,,
+9040,Conor Gallagher,West Bromwich Albion,144,Conor,Gallagher,6
+8905,Conor Townsend,West Bromwich Albion,,,,
+8756,Dara O&#039;Shea,West Bromwich Albion,,,,
+4391,Darnell Furlong,West Bromwich Albion,,,,
+6843,David Button,West Bromwich Albion,,,,
+8966,Filip Krovinovic,West Bromwich Albion,,,,
+6651,Grady Diangana,West Bromwich Albion,,,,
+1738,Hal Robson-Kanu,West Bromwich Albion,,,,
+1689,Jake Livermore,West Bromwich Albion,,,,
+3231,Kamil Grosicki,West Bromwich Albion,,,,
+7390,Karlan Grant,West Bromwich Albion,,,,
+545,Kieran Gibbs,West Bromwich Albion,,,,
+964,Kyle Bartley,West Bromwich Albion,,,,
+8758,Kyle Edwards,West Bromwich Albion,,,,
+6822,Lee Peltier,West Bromwich Albion,,,,
+7153,Matheus Pereira,West Bromwich Albion,,,,
+1737,Matt Phillips,West Bromwich Albion,,,,
+9290,Mbaye Diagne,West Bromwich Albion,,,,
+6932,Okay Yokuslu,West Bromwich Albion,,,,
+5562,Rekeem Harper,West Bromwich Albion,,,,
+8757,Romaine Sawyers,West Bromwich Albion,,,,
+1013,Sam Field,West Bromwich Albion,,,,
+978,Sam Johnstone,West Bromwich Albion,,,,
+4490,Semi Ajayi,West Bromwich Albion,,,,
+1691,Robert Snodgrass,"West Bromwich Albion,West Ham",,,,
+534,Aaron Cresswell,West Ham,411,Aaron,Cresswell,19
+6274,Andriy Yarmolenko,West Ham,412,Andriy,Yarmolenko,19
+528,Angelo Ogbonna,West Ham,409,Angelo,Ogbonna,19
+1760,Arthur Masuaku,West Ham,417,Arthur,Masuaku,19
+6424,Ben Johnson,West Ham,425,Ben,Johnson,19
+804,Craig Dawson,West Ham,414,Craig,Dawson,19
+540,Darren Randolph,West Ham,407,Darren,Randolph,19
+5553,Declan Rice,West Ham,421,Declan,Rice,19
+6892,Fabián Balbuena,West Ham,,,,
+1208,Felipe Anderson,West Ham,,,,
+3203,Issa Diop,West Ham,424,Issa,Diop,19
+1776,Jarrod Bowen,West Ham,420,Jarrod,Bowen,19
+558,Jesse Lingard,West Ham,276,Jesse,Lingard,13
+706,Lukasz Fabianski,West Ham,408,Lukasz,Fabianski,19
+535,Manuel Lanzini,West Ham,416,Manuel,Lanzini,19
+533,Mark Noble,West Ham,406,Mark,Noble,19
+531,Michail Antonio,West Ham,413,Michail,Antonio,19
+2335,Pablo Fornals,West Ham,423,Pablo,Fornals,19
+6891,Ryan Fredericks,West Ham,415,Ryan,Fredericks,19
+3585,Said Benrahma,West Ham,419,Saïd,Benrahma,19
+6144,Sébastien Haller,West Ham,,,,
+8288,Tomas Soucek,West Ham,422,Tomas,Soucek,19
+8965,Vladimir Coufal,West Ham,418,Vladimir,Coufal,19
+900,Adama Traoré,Wolverhampton Wanderers,435,Adama,Traoré,20
+6851,Conor Coady,Wolverhampton Wanderers,429,Conor,Coady,20
+8291,Daniel Podence,Wolverhampton Wanderers,438,Daniel,Castelo Podence,20
+8778,Fabio Silva,Wolverhampton Wanderers,445,Fabio,Silva,20
+5708,Fernando Marçal,Wolverhampton Wanderers,432,Fernando,Marçal,20
+3422,João Moutinho,Wolverhampton Wanderers,426,João Filipe Iria,Santos Moutinho,20
+785,John Ruddy,Wolverhampton Wanderers,452,John,Ruddy,20
+2280,Jonny,Wolverhampton Wanderers,433,Jonathan,Castro Otto,20
+8351,Ki-Jana Hoever,Wolverhampton Wanderers,443,Ki-Jana,Hoever,20
+7236,Leander Dendoncker,Wolverhampton Wanderers,434,Leander,Dendoncker,20
+7332,Max Kilman,Wolverhampton Wanderers,439,Max,Kilman,20
+6857,Morgan Gibbs-White,Wolverhampton Wanderers,440,Morgan,Gibbs-White,20
+6163,Nélson Semedo,Wolverhampton Wanderers,437,Nélson,Cabral Semedo,20
+8227,Oskar Buur,Wolverhampton Wanderers,,,,
+8180,Owen Otasowie,Wolverhampton Wanderers,442,Owen,Otasowie,20
+4918,Patrick Cutrone,Wolverhampton Wanderers,,,,
+6382,Pedro Neto,Wolverhampton Wanderers,441,Pedro,Lomba Neto,20
+4105,Raúl Jiménez,Wolverhampton Wanderers,430,Raúl,Jiménez,20
+6674,Rayan Ait Nouri,Wolverhampton Wanderers,,,,
+3491,Romain Saiss,Wolverhampton Wanderers,431,Romain,Saïss,20
+6853,Rúben Neves,Wolverhampton Wanderers,436,Rúben Diogo,da Silva Neves,20
+6856,Rúben Vinagre,Wolverhampton Wanderers,,,,
+6849,Rui Patrício,Wolverhampton Wanderers,427,Rui Pedro,dos Santos Patrício,20
+9209,Theo Corbeanu,Wolverhampton Wanderers,,,,
+8777,Vitinha,Wolverhampton Wanderers,,,,
+2361,Willian José,Wolverhampton Wanderers,,,,
+6850,Willy Boly,Wolverhampton Wanderers,428,Willy,Boly,20

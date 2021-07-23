@@ -8,3 +8,14 @@ fixtures/
 projections/
 wip/
 tempfiles/
+botTweet.py
+tempfiles_2020/
+playerHistory/
+projectionGraphs/
+preaseason21.py
+*.png
+*.ttf
+saveToDB.py
+*pycache/
+*.pyc
+keys_pl_understat_2020.*
