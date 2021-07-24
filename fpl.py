@@ -9,6 +9,7 @@ from drawTeam import drawTeam
 
 from collections import Counter
 
+#Randomly Picks a team
 
 def pickTeam(g,d,m,f):
     gk1 = g[30] # Cheapest gk, 
@@ -181,7 +182,7 @@ fwds = list(filter(lambda d: d['pos'] == 'F', all_players))
 
 
 #Set this for number of attempts
-attempts = 100000
+attempts = 100
 counter = 0
 
 best_team = []
@@ -193,10 +194,6 @@ print("run simulation")
 while(counter < attempts):
     if not(counter % 100000):
         print(counter / attempts)
-        #print(best_points)
-        #print('------------')
-        #print(best_formation)
-        #print('------------')
     counter += 1
     team = pickTeam(gks,defs,mids,fwds)
     if(team[1] > best_points):
