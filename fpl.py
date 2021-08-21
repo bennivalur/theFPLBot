@@ -66,30 +66,53 @@ def pickTeam(g,d,m,f):
     fwds = sorted([f1,f2,f3],key=lambda k: k['pts'],reverse=True)
 
     team = [gk1,gk2] + defs + mids + fwds
-    if(isLegal(team)):
+    if(isLegal(team,1000)):
       return findBestFormation(team)
     else:
         return [0,0,0]
       
     
 
-def isLegal(team):
+def isLegal(team,capital):
     price = 0
     teams = []
     for player in team:
         price += player['cost']
         teams.append(player['team'])
 
+    if(price > capital):
+        return False
+
+    ctr = Counter(teams)
+    
+    #CHeck if same team is represented more than 3 times
+    for k,v in ctr.items():
+        if (v > 3):
+            return False
+
+    return True
+
+def isLegalDebug(team):
+    price = 0
+    teams = []
+    for player in team:
+        price += player['cost']
+        teams.append(player['team'])
+
+    print("Price: " + str(price))
+    #print('teams: ' + teams)
+
     if(price > 1000):
         return False
 
     ctr = Counter(teams)
     
+    #CHeck if same team is represented more than 3 times
     for k,v in ctr.items():
+        print(v)
         if (v > 3):
             return False
-    
-
+            
     return True
 
 def calculatePoints(team):
@@ -171,43 +194,45 @@ def scoring532(team):
     temp = [team[0],team[2],team[3],team[4],team[5],team[6],team[7],team[8],team[9],team[12],team[13]]
     return calculatePoints(temp)
 
-with open('tempfiles/projections.json','r') as fpl:
-    all_players = json.load(fpl)
 
-#fill player positions
-gks = list(filter(lambda d: d['pos'] == 'GK', all_players))
-defs = list(filter(lambda d: d['pos'] == 'D', all_players))
-mids = list(filter(lambda d: d['pos'] == 'M', all_players))
-fwds = list(filter(lambda d: d['pos'] == 'F', all_players))
+def buildSquad(attempts):
+    with open('tempfiles/projections.json','r') as fpl:
+        all_players = json.load(fpl)
 
+    #fill player positions
+    gks = list(filter(lambda d: d['pos'] == 'GK', all_players))
+    defs = list(filter(lambda d: d['pos'] == 'D', all_players))
+    mids = list(filter(lambda d: d['pos'] == 'M', all_players))
+    fwds = list(filter(lambda d: d['pos'] == 'F', all_players))
 
-#Set this for number of attempts
-attempts = 100
-counter = 0
+    counter = 0
 
-best_team = []
-best_points = 0
-best_formation = ''
-start = time.time()
-print("run simulation")
+    best_team = []
+    best_points = 0
+    best_formation = ''
+    start = time.time()
+    print("run simulation")
 
-while(counter < attempts):
-    if not(counter % 100000):
-        print(counter / attempts)
-    counter += 1
-    team = pickTeam(gks,defs,mids,fwds)
-    if(team[1] > best_points):
-        best_team = team[0]
-        best_points = team[1]
-        best_formation = team[2]
-end = time.time()
+    while(counter < attempts):
+        if not(counter % 100000):
+            print(counter / attempts)
+        counter += 1
+        team = pickTeam(gks,defs,mids,fwds)
+        if(team[1] > best_points):
+            best_team = team[0]
+            best_points = team[1]
+            best_formation = team[2]
+    end = time.time()
 
-print('Finished ' + str(attempts) + ' in ' + str((end - start)) + ' seconds') 
-print('------------')
-print('------------')
-print(best_points)
-print('------------')
-print(best_formation)
-print('------------')
+    print('Finished ' + str(attempts) + ' in ' + str((end - start)) + ' seconds') 
+    print('------------')
+    print('------------')
+    print(best_points)
+    print('------------')
+    print(best_formation)
+    print('------------')
 
-drawTeam(best_formation,best_team)
+    drawTeam(best_formation,best_team,'pre_suggest',[])
+    return best_team
+
+#buildSquad(100)

@@ -32,22 +32,22 @@ teams_u = [
     {'title':'0','uid':-1},
     {'title':'Arsenal','uid': '83'},
     {'title':'Aston Villa','uid':'71'},
+    {'title':'Brentford','uid':'244'},
     {'title':'Brighton','uid':'220'},
     {'title':'Burnley','uid':'92'},
     {'title':'Chelsea', 'uid':'80'},
     {'title':'Crystal Palace','uid':'78'},
     {'title':'Everton','uid':'72'},
-    {'title':'Fulham','uid':'228'},
     {'title':'Leicester','uid':'75'},
     {'title':'Leeds','uid':'245'},
     {'title':'Liverpool','uid':'87'},
     {'title':'Manchester City','uid':'88'},
     {'title':'Manchester United','uid':'89'},
     {'title':'Newcastle United','uid':'86'},
-    {'title':'Sheffield United', 'uid':'238'},
+    {'title':'Norwich','uid':'79'},
     {'title':'Southampton', 'uid':'74'},
     {'title':'Tottenham','uid':'82'},
-    {'title':'West Bromwich Albion','uid':'76'},
+    {'title':'Watford','uid':'90'},
     {'title':'West Ham', 'uid':'81'},
     {'title':'Wolverhampton Wanderers','uid':'229'},
 ]
@@ -63,7 +63,7 @@ colors = {
     'Everton':'#274488',
     'Leeds':'#ffffff',
     'Leicester':'#0053a0',
-    'Liverpool':' #d01317',
+    'Liverpool':'#d01317',
     'Man City':'#6CADDF',
     'Man Utd':'#da020e',
     'Newcastle':'#000000',
@@ -184,7 +184,10 @@ def scoring(p,odds):
 
     games = p['games']
 
-    total_games = p['total_points'] / p['points_per_game']
+    if(p['points_per_game'] != 0):
+        total_games = p['total_points'] / p['points_per_game']
+    else:
+        total_games = 1
     
     
     pts = 0

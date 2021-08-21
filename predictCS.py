@@ -14,25 +14,26 @@ teams = [
     {'title':'0','uid':-1},
     {'title':'Arsenal','uid': '83'},
     {'title':'Aston Villa','uid':'71'},
+    {'title':'Brentford','uid':'244'},
     {'title':'Brighton','uid':'220'},
     {'title':'Burnley','uid':'92'},
     {'title':'Chelsea', 'uid':'80'},
     {'title':'Crystal Palace','uid':'78'},
     {'title':'Everton','uid':'72'},
-    {'title':'Fulham','uid':'228'},
     {'title':'Leicester','uid':'75'},
     {'title':'Leeds','uid':'245'},
     {'title':'Liverpool','uid':'87'},
     {'title':'Manchester City','uid':'88'},
     {'title':'Manchester United','uid':'89'},
     {'title':'Newcastle United','uid':'86'},
-    {'title':'Sheffield United', 'uid':'238'},
+    {'title':'Norwich','uid':'79'},
     {'title':'Southampton', 'uid':'74'},
     {'title':'Tottenham','uid':'82'},
-    {'title':'West Bromwich Albion','uid':'76'},
+    {'title':'Watford','uid':'90'},
     {'title':'West Ham', 'uid':'81'},
     {'title':'Wolverhampton Wanderers','uid':'229'},
 ]
+
 async def getFixtures(season):
     async with aiohttp.ClientSession() as session:
         understat = Understat(session)
@@ -41,7 +42,7 @@ async def getFixtures(season):
         )
 
         data = json.dumps(results)
-        with open('tempfiles/fixtures.json', 'w') as file:
+        with open('tempfiles/unders_fixtures.json', 'w') as file:
             file.write(data)
 
 def getUnderStat(season):
@@ -57,7 +58,7 @@ def fplFixtures():
         file.write(results)
 
 def getResults():
-    with open('tempfiles/EPL_2020_res.json', 'r') as all_weeks:
+    with open('tempfiles/EPL_2021_res.json', 'r') as all_weeks:
         results = json.load(all_weeks)
     return results
     
@@ -80,7 +81,7 @@ def getGameWeek(week):
     with open('tempfiles/events.json', 'r') as all_games:
         games = json.load(all_games)
     
-    return games[week-1]
+    return games[week]
 
 
 def getFix():
@@ -116,10 +117,12 @@ def getRangeStart(form_range):
 #getUnderStat(2020)
 def predictCS():
     print("Predicting Clean Sheets Odds")
+    getUnderStat('2021')
     fplFixtures()
-    week = getNextGameWeek()
+    week = getNextGameWeek() - 1
 
     deadline = getGameWeek(week)['deadline_time']
+    print(deadline)
     endOfGameWeek = getGameWeek(week+1)['deadline_time']
 
     #Get upcoming fixtures
