@@ -14,9 +14,9 @@ async def main():
     async with aiohttp.ClientSession() as session:
         url = 'https://understat.com/main/getPlayersStats/'
         if(getNextGameWeek() < 6):
-            myobj = {'season': '2021','league':'epl'}
+            myobj = {'season': '2022','league':'epl'}
         else:
-            myobj = {'season': '2021','league':'epl','date_start':getRangeStart(5)}
+            myobj = {'season': '2022','league':'epl','date_start':getRangeStart(5)}
 
         players = requests.post(url, data = myobj)
         players = players.json()
@@ -38,7 +38,28 @@ def getFPL():
 
     with open('tempfiles/fpl_players.json', 'w') as file:
         file.write(json.dumps(fpl_players))
+
+    jsonTocsv = pd.read_json('tempfiles/fpl_players.json')
+    jsonTocsv.to_csv('tempfiles/fpl_players.csv',index=False)
   
+def getLeague(league):
+    fpl = urllib.request.urlopen("https://fantasy.premierleague.com/api/leagues-classic/"+ str(league) + "/standings/").read()
+    fpl = json.loads(fpl)
+
+    
+    with open('tempfiles/botsvsbots.json','r') as main_pl:
+        entries = json.load(main_pl)
+
+
+    if(entries != []):
+        if(entries[-1]["last_updated_data"] != fpl['last_updated_data']):
+            entries.append(fpl)
+        
+            with open('tempfiles/botsvsbots.json', 'w') as file:
+                file.write(json.dumps(entries))
+    else:
+        with open('tempfiles/botsvsbots.json', 'w') as file:
+                file.write(json.dumps([fpl]))
 
 def getUnderStat():
     print("Get Understat")

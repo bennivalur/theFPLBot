@@ -1,4 +1,4 @@
-from fpl import findBestFormation,isLegal,isLegalDebug
+from fpl import findBestFormation,isLegal
 import copy
 import json,urllib
 import itertools
@@ -26,7 +26,7 @@ def convertFPLteam(team):
     return squad
 
 #Players in team
-#Number free transfers
+#Number of free transfers (1,2)
 def suggestTransfers(players,free_transfers,capital):
     with open('tempfiles/projections.json','r') as fpl:
         all_players = json.load(fpl)
@@ -38,15 +38,11 @@ def suggestTransfers(players,free_transfers,capital):
         'F' : list(filter(lambda d: d['pos'] == 'F', all_players))
     }
 
-    new_team = copy.deepcopy(players)
-
     temp = findBestFormation(players)
     current_pts = temp[1]
     print("Current team best points: " + str(current_pts))
 
     transfer_suggestions = []
-
-    isLegalDebug(players)
     for index, p in enumerate(players):
         for tr in players_sorted[p['pos']]:
             if p != tr and tr not in players:
@@ -58,9 +54,9 @@ def suggestTransfers(players,free_transfers,capital):
 
     best_pts = current_pts
     take_hit = False
+
     for t in transfer_suggestions:
         temp = findBestFormation(t)
-        
         if(temp[1] > best_pts):
             if(temp[1] + 4 > best_pts):
                 take_hit = True
@@ -68,8 +64,10 @@ def suggestTransfers(players,free_transfers,capital):
             best_formation = temp[2]
             best_team = temp[0]
     
-    #while(take_hit):
-    if( take_hit):
+    many_transfers = 0
+    while(free_transfers > many_transfers):
+        many_transfers += 1
+    if(many_transfers):
         take_hit = False
         for index, p in enumerate(best_team):
             for tr in players_sorted[p['pos']]:
@@ -79,9 +77,10 @@ def suggestTransfers(players,free_transfers,capital):
                     if(isLegal(temp_team,capital)):
                         transfer_suggestions.append(temp_team)
 
+        best_pts = 0
         for t in transfer_suggestions:
             temp = findBestFormation(t)
-            if(temp[1] > best_pts):
+            if(temp[1] > best_pts and isLegal(temp[0],capital)):
                 if(temp[1] + 4 > best_pts):
                     take_hit = True
                 best_pts = temp[1]
@@ -90,16 +89,6 @@ def suggestTransfers(players,free_transfers,capital):
     
 
     transfered_players = list(itertools.filterfalse(lambda x: x in players, best_team)) + list(itertools.filterfalse(lambda x: x in best_team, players))
-
-    if(len(transfered_players) == 1):
-        print("some problem")
-        print("original team---------")
-        for p in players:
-            print(p)
-        print("new team --------")
-        for t in best_team:
-            print(t)
-        print("-------------------")
     
     return [best_formation,best_team,transfered_players]
     

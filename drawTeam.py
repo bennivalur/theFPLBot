@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw
 from PIL import ImageFont
 
+
 def isPlural(transfers):
     if len(transfers) > 2:
         return 's'
@@ -8,6 +9,17 @@ def isPlural(transfers):
         return ''
 
 def drawTeam(formation, players,file_name,transfers):
+
+    print("formation: " + formation)
+    
+    g = sorted(list(filter(lambda d: d['pos'] == 'GK', players)),key=lambda k: k['pts'],reverse=True)
+    d = sorted(list(filter(lambda d: d['pos'] == 'D', players)),key=lambda k: k['pts'],reverse=True)
+    m = sorted(list(filter(lambda d: d['pos'] == 'M', players)),key=lambda k: k['pts'],reverse=True)
+    f = sorted(list(filter(lambda d: d['pos'] == 'F', players)),key=lambda k: k['pts'],reverse=True)
+    players=g+d+m+f
+
+    for p in players:
+        print(p)
     field_width = 680
     field_length = 1050
 
@@ -91,7 +103,6 @@ def drawTeam(formation, players,file_name,transfers):
     for x in range(0,no_defenders):
         p = players[2+x]
         w = field_width / (1+no_defenders)
-
         #box and name
         draw.rectangle((w + (w*x)-player_size/2, d_h, w + (w*x)+player_size/2 , d_h + player_size), fill=p['color'])
         draw.text((w+(w*x) ,d_h+player_size+20),p['short'],(0,0,0),anchor='ms',font=font)
@@ -106,7 +117,6 @@ def drawTeam(formation, players,file_name,transfers):
     for x in range(0,no_midfielders):
         p = players[7+x]
         w = field_width / (1+no_midfielders)
-
         #box and name
         draw.rectangle((w + (w*x)-player_size/2, m_h, w + (w*x)+player_size/2 , m_h + player_size), fill=p['color'])
         draw.text((w+(w*x) ,m_h+player_size+20),p['short'],(0,0,0),anchor='ms',font=font)
@@ -144,9 +154,9 @@ def drawTeam(formation, players,file_name,transfers):
     elif(no_defenders == 4):
         b1 = players[6]
         if(no_midfielders == 3):
-            b2 = players[8]
-            b3 = players[9]
-        if(no_midfielders == 4):
+            b2 = players[10]
+            b3 = players[11]
+        elif(no_midfielders == 4):
             b2 = players[11]
             b3 = players[14]
         else:
@@ -162,8 +172,6 @@ def drawTeam(formation, players,file_name,transfers):
             b2 = players[13]
             b3 = players[14]
         
-    
-
     #BenchPlayers
     draw.rectangle((75, 800, 75 + player_size, 800 + player_size), fill=gk2['color'])
     draw.text((75+player_size/2, 800+player_size+20),gk2['short'],(0,0,0),anchor='ms',font=font)
@@ -213,6 +221,7 @@ def drawTeam(formation, players,file_name,transfers):
     txt = 'Points: ' + str(round(pts,2)) + ' | Cost: ' + str(round(cost,2))
     draw.text((field_width/2,field_length-340),txt,(0,0,0),anchor='ms',font=font)
 
+    #Draw Tranfer section if transfers were made
     if(len(transfers) > 0):
         font = ImageFont.truetype("Roboto-Black.ttf", 15)
         draw.rectangle((field_width,0, field_width+transfers_width, field_length-100), fill=(46, 162, 219), outline=(5, 47, 82),width=10)
@@ -298,7 +307,7 @@ def drawTeam(formation, players,file_name,transfers):
         im.paste(img, offset)
         font = ImageFont.truetype("Roboto-Black.ttf", 20)
         draw.text(((field_width+(transfers_width/2)) , (field_length - 155)),'Made by @bennivaluR_ for @theFPLBot',(0,0,0),anchor='ms',font=font)
-        draw.text(((field_width+(transfers_width/2)) , (field_length - 130) ),'www.fpl-bot.com',(0,0,0),anchor='ms',font=font)
+        draw.text(((field_width+(transfers_width/2)) , (field_length - 130) ),'www.thefplbot.com',(0,0,0),anchor='ms',font=font)
 
 
     im.save('transfers/' + file_name + '.png', quality=95)

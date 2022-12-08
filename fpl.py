@@ -80,12 +80,13 @@ def isLegal(team,capital):
         price += player['cost']
         teams.append(player['team'])
 
+    
     if(price > capital):
         return False
-
+    
     ctr = Counter(teams)
     
-    #CHeck if same team is represented more than 3 times
+    #Check if same team is represented more than 3 times
     for k,v in ctr.items():
         if (v > 3):
             return False
@@ -118,12 +119,18 @@ def isLegalDebug(team):
 def calculatePoints(team):
     pts = 0
     for p in team:
-      pts += p['pts']
+      pts += float(p['pts'])
     
     return pts
   
 
 def findBestFormation(team):
+    g = sorted(list(filter(lambda d: d['pos'] == 'GK', team)),key=lambda k: k['pts'],reverse=True)
+    d = sorted(list(filter(lambda d: d['pos'] == 'D', team)),key=lambda k: k['pts'],reverse=True)
+    m = sorted(list(filter(lambda d: d['pos'] == 'M', team)),key=lambda k: k['pts'],reverse=True)
+    f = sorted(list(filter(lambda d: d['pos'] == 'F', team)),key=lambda k: k['pts'],reverse=True)
+    team=g+d+m+f
+
     points = scoring352(team)
     formation = '3-5-2'
 
@@ -156,7 +163,6 @@ def findBestFormation(team):
     if(temp > points):
         points = temp
         formation = '5-4-1'
-    
     
     return [team,points,formation]
 
