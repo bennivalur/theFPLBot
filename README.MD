@@ -1,4 +1,4 @@
-# Fantasypl2020
+# theFPLBot
 
 This project uses data from [understat.com](https://understat.com/league/EPL) and official Fantasy Premier League(FPL) data to generate a FPL team.
 
