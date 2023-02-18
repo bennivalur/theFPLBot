@@ -191,33 +191,62 @@ def predictCS():
     with open('tempfiles/clean_sheet_odds.json', 'w') as file:
         file.write(json.dumps(allOdds))
 
-#TODO finish comparing the results of our virtual bets to the actual real life results
-def checkBetResults():
+def checkBetResults(bet_amount,odds_margin):
     #fplFixtures(True)
-    print("chekking")
+    print("chekking bet results")
     
     with open('tempfiles/bet_scheme.json', 'r') as all_bets:
         bets = json.load(all_bets)
 
     with open('tempfiles/all_fpl_fixtures.json', 'r') as file:
         results = json.load(file)
-
+    wins = 0
+    losses = 0
+    balance = 0
     for b in bets:
-       
-        g = next(item for item in results if item["code"] == b['fpl_code'])
-        print(g)
-        """if(g['finished']):
-            if(b['home_away'] == 'home'):
-                if(b['cS'] == 'Yes'):
-                    if(g['team_a_score'] > 0):
-                        print("bet failed")
+        if((float(b['myOdds']) - float(b['lengjanOdds'])) > odds_margin):
+            g = next(item for item in results if item["code"] == b['fpl_code'])
+            if(g['finished']):
+                if(b['home_away'] == 'home'):
+                    if(b['cS'] == 'Yes'):
+                        if(g['team_a_score'] > 0):
+                            balance -= bet_amount
+                            losses += 1
+                        else:
+                            balance += bet_amount * (1/float(b['lengjanOdds']))
+                            wins += 1
                     else:
-            else:"""               
+                        if(g['team_a_score'] == 0):
+                            balance += bet_amount * (1/float(b['lengjanOdds']))
+                            wins += 1
+                        else:
+                            balance -= bet_amount
+                            losses += 1
+                else:
+                    if(b['cS'] == 'Yes'):
+                        if(g['team_h_score'] > 0):
+                            balance -= bet_amount
+                            losses += 1
+                        else:
+                            balance += bet_amount * (1/float(b['lengjanOdds']))
+                            wins += 1
+                    else:
+                        if(g['team_h_score'] == 0):
+                            balance += bet_amount * (1/float(b['lengjanOdds']))
+                            wins += 1
+                        else:
+                            balance -= bet_amount
+                            losses += 1
 
+    print("wins: " + str(wins))
+    print("losses: " + str(losses))            
+    print("balance: " + str(balance))
+    percentProf = balance /((wins + losses)*bet_amount + balance) * 100
+    #percentProf = balance / starting_budget * 100
+    print(str(round(percentProf,2)) + '%')
 
 def checkBets():
     print("Checking Bets")
-    print("TODO CODE FOR UNDERSTAT MATCH ID IS WRONG")
     with open('tempfiles/clean_sheet_odds.json', 'r') as all_games:
         games = json.load(all_games)
 

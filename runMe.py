@@ -10,7 +10,7 @@ from drawLeague import drawLeague
 import pandas as pd
 
 #How many games back we look at
-"""form_range = 5
+form_range = 5
 
 getFPL()
 week = getNextGameWeek()
@@ -49,7 +49,8 @@ drawRankings('F',week,15)
 #Get latest standings for the BotsVsBots league
 getLeague(850313)
 drawLeague(week)
-"""
+
 #compare my models odds of keeping a clean sheet to the odds of lengjan.is
-#checkBets()
-checkBetResults()
+checkBets()
+#Input = betting_amount,bet_margin
+checkBetResults(10000,0.17)
