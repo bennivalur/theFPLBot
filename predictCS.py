@@ -96,7 +96,9 @@ def getResults():
     
 
 def calcOdds(xGSum):
-    odds = (xGSum * -1 * 0.103044) + 0.564388
+    #odds = (xGSum * -1 * 0.103044) + 0.564388
+    #New formula as of 18.02.2023
+    odds = (xGSum * -1 * 0.112397) + 0.589429
     if odds <= 0:
         return 0
     return odds
