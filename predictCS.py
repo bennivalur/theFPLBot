@@ -57,7 +57,8 @@ lengjan_teams = {
     'Wolves':'Wolverhampton Wanderers',
     'Fulham':'Fulham',# not confirmed
     'Brentford':'Brentford', # not confirmed
-    'Nottingham Forest':'Nottingham Forest',#not confirmed
+    'Nott.Forest':'Nottingham Forest',
+    'Bournemouth':'Bournemouth'
 }
 
 async def getFixtures(season):
@@ -190,29 +191,59 @@ def predictCS():
     with open('tempfiles/clean_sheet_odds.json', 'w') as file:
         file.write(json.dumps(allOdds))
 
-#TODO finish comparing the results of our virtual bets to the actual real life results
-def checkBetResults():
+def checkBetResults(bet_amount,odds_margin):
     #fplFixtures(True)
-    print("chekking")
+    print("chekking bet results")
     
     with open('tempfiles/bet_scheme.json', 'r') as all_bets:
         bets = json.load(all_bets)
 
     with open('tempfiles/all_fpl_fixtures.json', 'r') as file:
         results = json.load(file)
-
+    wins = 0
+    losses = 0
+    balance = 0
     for b in bets:
-       
-        g = next(item for item in results if item["code"] == b['fpl_code'])
-        print(g)
-        """if(g['finished']):
-            if(b['home_away'] == 'home'):
-                if(b['cS'] == 'Yes'):
-                    if(g['team_a_score'] > 0):
-                        print("bet failed")
+        if((float(b['myOdds']) - float(b['lengjanOdds'])) > odds_margin):
+            g = next(item for item in results if item["code"] == b['fpl_code'])
+            if(g['finished']):
+                if(b['home_away'] == 'home'):
+                    if(b['cS'] == 'Yes'):
+                        if(g['team_a_score'] > 0):
+                            balance -= bet_amount
+                            losses += 1
+                        else:
+                            balance += bet_amount * (1/float(b['lengjanOdds']))
+                            wins += 1
                     else:
-            else:"""               
+                        if(g['team_a_score'] == 0):
+                            balance += bet_amount * (1/float(b['lengjanOdds']))
+                            wins += 1
+                        else:
+                            balance -= bet_amount
+                            losses += 1
+                else:
+                    if(b['cS'] == 'Yes'):
+                        if(g['team_h_score'] > 0):
+                            balance -= bet_amount
+                            losses += 1
+                        else:
+                            balance += bet_amount * (1/float(b['lengjanOdds']))
+                            wins += 1
+                    else:
+                        if(g['team_h_score'] == 0):
+                            balance += bet_amount * (1/float(b['lengjanOdds']))
+                            wins += 1
+                        else:
+                            balance -= bet_amount
+                            losses += 1
 
+    print("wins: " + str(wins))
+    print("losses: " + str(losses))            
+    print("balance: " + str(balance))
+    percentProf = balance /((wins + losses)*bet_amount + balance) * 100
+    #percentProf = balance / starting_budget * 100
+    print(str(round(percentProf,2)) + '%')
 
 def checkBets():
     print("Checking Bets")
@@ -223,11 +254,10 @@ def checkBets():
     odds = urllib.request.urlopen("https://games.lotto.is/game/lengjan-events?live=0").read()
     odds = json.loads(odds)
 
-    events = odds['paperEvents']
+    events = odds['events']
     pl_events = []
     for e in events:
         if e['compid'] == '296':
-            #print(e['eventid'])
             #print(e['participants'])
             pl_events.append(e)
 
@@ -267,7 +297,9 @@ def checkBets():
     with open('tempfiles/temp_clean_sheet_odds.json', 'w') as file:
         file.write(json.dumps(markets))
 
-    bets_to_save = []
+    with open('tempfiles/bet_scheme.json', 'r') as all_games:
+        bets_to_save = json.load(all_games)
+
     for key in markets:
         home_team = markets[key]['understat'][0]['team']
         my_home_team_odds = str(markets[key]['understat'][0]['csOdds'])
@@ -287,24 +319,24 @@ def checkBets():
         #Print out and save entries if our models odds are morer favorable than the odds of Lengjan
         if(float(my_home_team_odds) > float(lengjan_home_team_odds)):
             print('BET Clean Sheet(+' + str(round(100*(float(my_home_team_odds) - float(lengjan_home_team_odds)),2)) + '%): ' + home_team + ' against ' + away_team + ': ' + my_home_team_odds+ ' ' + lengjan_home_team_odds)
-            bets_to_save.append({'cS':'Yes','home_away':'home','team':home_team,'opponent':away_team,'myOdds':my_home_team_odds,'lengjanOdds':lengjan_home_team_odds,'fpl_code':markets[key]['understat'][0]['code']})
+            bets_to_save.append({'cS':'Yes','home_away':'home','team':home_team,'opponent':away_team,'myOdds':my_home_team_odds,'lengjanOdds':lengjan_home_team_odds,'fpl_code':markets[key]['understat'][0]['code'],'result':0})
         if((float(my_home_concede_odds) > float(lengjan_home_team_concede_odds))):
             print('BET NO Clean Sheet(+' + str(round(100*(float(my_home_concede_odds) - float(lengjan_home_team_concede_odds)),2))+ '%): ' + home_team + ' against ' + away_team + ': ' + my_home_concede_odds + ' ' + lengjan_home_team_concede_odds)
-            bets_to_save.append({'cS':'No','home_away':'home','team':home_team,'opponent':away_team,'myOdds':my_home_team_odds,'lengjanOdds':lengjan_home_team_odds,'fpl_code':markets[key]['understat'][0]['code']})
+            bets_to_save.append({'cS':'No','home_away':'home','team':home_team,'opponent':away_team,'myOdds':my_home_concede_odds,'lengjanOdds':lengjan_home_team_concede_odds,'fpl_code':markets[key]['understat'][0]['code'],'result':0})
         if(float(my_away_team_odds) > float(lengjan_away_team_odds)):
             print('BET Clean Sheet(+' + str(round(100*(float(my_away_team_odds) - float(lengjan_away_team_odds)),2)) + '%): ' + away_team + ' against ' + home_team + ': ' + my_away_team_odds+ ' ' + lengjan_away_team_odds)
-            bets_to_save.append({'cS':'Yes','home_away':'away','team':away_team,'opponent':home_team,'myOdds':my_away_team_odds,'lengjanOdds':lengjan_home_team_odds,'fpl_code':markets[key]['understat'][0]['code']})
+            bets_to_save.append({'cS':'Yes','home_away':'away','team':away_team,'opponent':home_team,'myOdds':my_away_team_odds,'lengjanOdds':lengjan_away_team_odds,'fpl_code':markets[key]['understat'][0]['code'],'result':0})
         if((float(my_away_concede_odds) > float(lengjan_away_team_concede_odds))):
             print('BET NO Clean Sheet(+' + str(round(100*(float(my_away_concede_odds) - float(lengjan_away_team_concede_odds)),2))+ '%): ' + away_team + ' against ' + home_team + ': ' + my_away_concede_odds + ' ' + lengjan_away_team_concede_odds)
-            bets_to_save.append({'cS':'No','home_away':'away','team':away_team,'opponent':home_team,'myOdds':my_away_team_odds,'lengjanOdds':lengjan_away_team_odds,'fpl_code':markets[key]['understat'][0]['code']})
+            bets_to_save.append({'cS':'No','home_away':'away','team':away_team,'opponent':home_team,'myOdds':my_away_concede_odds,'lengjanOdds':lengjan_away_team_concede_odds,'fpl_code':markets[key]['understat'][0]['code'],'result':0})
 
         with open('tempfiles/bet_scheme.json', 'w') as file:
             file.write(json.dumps(bets_to_save))
         #print(home_team + ' against ' + away_team + ': ' + my_home_team_odds+ ' ' + lengjan_home_team_odds + ' | ' +  my_home_concede_odds + ' ' + lengjan_home_team_concede_odds)
         #print(away_team + ' against ' + home_team + ': ' + my_away_team_odds+ ' ' + lengjan_away_team_odds + ' | ' +  my_away_concede_odds + ' ' + lengjan_away_team_concede_odds)
         
-    for b in bets_to_save:
-        print(b)
+    #for b in bets_to_save:
+    #    print(b)
 
 
 

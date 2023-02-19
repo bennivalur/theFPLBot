@@ -145,7 +145,7 @@ def getFixtures(week):
 
 
 def getData(week):
-    getSeasons('EPL','2021')
+    getSeasons('EPL','2022')
     getFPL()
     getUnderStat()
     mergeSets()

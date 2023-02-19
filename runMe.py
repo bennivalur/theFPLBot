@@ -36,7 +36,7 @@ print("capital:" + str(capital))
 #squad = buildSquad(700000000)
 
 
-suggested = suggestTransfers(squad,1,capital)
+suggested = suggestTransfers(squad,10,capital)
 drawTeam(suggested[0],suggested[1],'week_' + str(week) + '_transfers',suggested[2])
 #drawTeam(suggested[0],suggested[1],'preseason22_23',suggested[2])
 
@@ -51,5 +51,6 @@ getLeague(850313)
 drawLeague(week)
 
 #compare my models odds of keeping a clean sheet to the odds of lengjan.is
-#checkBets()
-#checkBetResults()
+checkBets()
+#Input = betting_amount,bet_margin
+checkBetResults(10000,0.17)

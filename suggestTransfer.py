@@ -67,7 +67,7 @@ def suggestTransfers(players,free_transfers,capital):
     many_transfers = 0
     while(free_transfers > many_transfers):
         many_transfers += 1
-    if(many_transfers):
+    if(not many_transfers):
         take_hit = False
         for index, p in enumerate(best_team):
             for tr in players_sorted[p['pos']]:
