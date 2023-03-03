@@ -63,7 +63,7 @@ def plotProjections(name,id):
             points.append(s['total_points'])
             index += 1
         
-        x.append('2021/2022')
+        x.append('2022/2023')
         points.append(projected_player['pts'])
     
 

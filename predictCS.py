@@ -90,7 +90,7 @@ def fplFixtures(isAllSeason):
             file.write(results)
 
 def getResults():
-    with open('tempfiles/EPL_2021_res.json', 'r') as all_weeks:
+    with open('tempfiles/EPL_2022_res.json', 'r') as all_weeks:
         results = json.load(all_weeks)
     return results
     
