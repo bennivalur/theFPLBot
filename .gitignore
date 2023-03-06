@@ -23,3 +23,4 @@ saveToDB.py
 *.pyc
 keys_pl_understat_2020.*
 oldkeys/
+env/

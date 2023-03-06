@@ -87,6 +87,8 @@ def getTeam(team):
     return list(filter(lambda d: d['title'] == team, teams))[0]['team']
 
 def getTitle(team):
+    if(team == "Nott'm Forest"):
+        return teams[15]['title']
     return list(filter(lambda d: d['team'] == team, teams))[0]['title']
 
 def getPosition(pos):
@@ -132,7 +134,10 @@ def fillPlayers(draw,pos,numberOf,img_h):
         draw.rectangle((0,header + table_header_height+((index+1)*player_height), width,header + table_header_height+((index+1)*player_height)+10), fill=(5, 47, 82), outline=(5, 47, 82),width=0)
         draw.rectangle((10,10+header + table_header_height+((index)*player_height), columns[0],header + table_header_height+((index+1)*player_height)), fill=p['color'], outline=(5, 47, 82),width=0)
 
-        cs = list(filter(lambda d: d['team'] == getTitle(p['team']), clean_sheets))[0]
+        print(p)
+        print("--------")
+        teamTitle = getTitle(p['team'])
+        cs = list(filter(lambda d: d['team'] == teamTitle, clean_sheets))[0]
         
         texts = ['',p['short'],p['team'] +' vs. ' + getTeam(cs['opponent']),str(p['pts']),str(round(cs['csOdds']*100,1))+'%',str(p['cost']/10)]
 

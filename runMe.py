@@ -51,6 +51,6 @@ getLeague(850313)
 drawLeague(week)
 
 #compare my models odds of keeping a clean sheet to the odds of lengjan.is
-checkBets()
+#checkBets()
 #Input = betting_amount,bet_margin
-checkBetResults(10000,0.17)
+#checkBetResults(10000,0.17)
