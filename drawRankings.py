@@ -134,8 +134,6 @@ def fillPlayers(draw,pos,numberOf,img_h):
         draw.rectangle((0,header + table_header_height+((index+1)*player_height), width,header + table_header_height+((index+1)*player_height)+10), fill=(5, 47, 82), outline=(5, 47, 82),width=0)
         draw.rectangle((10,10+header + table_header_height+((index)*player_height), columns[0],header + table_header_height+((index+1)*player_height)), fill=p['color'], outline=(5, 47, 82),width=0)
 
-        print(p)
-        print("--------")
         teamTitle = getTitle(p['team'])
         cs = list(filter(lambda d: d['team'] == teamTitle, clean_sheets))[0]
         

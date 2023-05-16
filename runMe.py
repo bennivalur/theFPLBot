@@ -23,7 +23,7 @@ findMissingPlayers()
 #Predict clean sheet odds
 predictCS()
 
-makeProjections()
+#makeProjections()
 
 #Get players on the team of the bot
 team = getTeam(3939796,week-1)
@@ -33,7 +33,7 @@ capital = team['entry_history']['value'] ##+ team['entry_history']['bank']
 print("capital:" + str(capital))
 
 #Only for preseason or wildcard - builds a squad from scratch
-#squad = buildSquad(700000000)
+#squad = buildSquad(100000000)
 
 
 suggested = suggestTransfers(squad,10,capital)
@@ -51,6 +51,7 @@ getLeague(850313)
 drawLeague(week)
 
 #compare my models odds of keeping a clean sheet to the odds of lengjan.is
-#checkBets()
+
+checkBets()
 #Input = betting_amount,bet_margin
-#checkBetResults(10000,0.17)
+#checkBetResults(10000,0.00)
