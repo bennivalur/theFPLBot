@@ -14,9 +14,9 @@ async def main():
     async with aiohttp.ClientSession() as session:
         url = 'https://understat.com/main/getPlayersStats/'
         if(getNextGameWeek() < 6):
-            myobj = {'season': '2022','league':'epl'}
+            myobj = {'season': '2023','league':'epl'}
         else:
-            myobj = {'season': '2022','league':'epl','date_start':getRangeStart(5)}
+            myobj = {'season': '2023','league':'epl','date_start':getRangeStart(5)}
 
         players = requests.post(url, data = myobj)
         players = players.json()
@@ -75,6 +75,8 @@ def mergeSets():
     fpl.rename(columns={'id': 'fpl_id'}, inplace=True)
     unders.rename(columns={'id':'understat_id'},inplace=True)
 
+    fpl.to_csv('tempfiles/pl_all_players.csv',index=False)
+    unders.to_csv('tempfiles/under_all_players.csv',index=False)
     keys = pd.read_csv('keys_pl_understat.csv', low_memory=False)
 
     main_table = pd.merge(fpl,keys, on='fpl_id',how='inner')
@@ -87,8 +89,7 @@ def mergeSets():
 
     main_table.rename(columns={'team_x':'team'},inplace=True)
 
-    fpl.to_csv('tempfiles/pl_all_players.csv',index=False)
-    unders.to_csv('tempfiles/under_all_players.csv',index=False)
+    
 
     main_table.to_csv('tempfiles/maindata.csv',index=False)
     main_table.to_json('tempfiles/maindata.json',orient='records')
@@ -145,7 +146,7 @@ def getFixtures(week):
 
 
 def getData(week):
-    getSeasons('EPL','2022')
+    getSeasons('EPL','2024')
     getFPL()
     getUnderStat()
     mergeSets()

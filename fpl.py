@@ -4,7 +4,7 @@ import json
 import random
 import operator
 import time
-
+import pandas as pd
 from drawTeam import drawTeam
 
 from collections import Counter
@@ -240,5 +240,109 @@ def buildSquad(attempts):
 
     drawTeam(best_formation,best_team,'pre_suggest',[])
     return best_team
+
+def getGKAndHandcuff(gk,gks):
+    print("finding gk handcuff")
+    gks = list(filter(lambda d: d['team'] == gk['team'], gks))
+    return gks[0:2]
+
+def buildSmartSquad(attempts):
+    with open('tempfiles/projections.json','r') as fpl:
+        all_players = json.load(fpl)
+
+    jsonTocsv = pd.read_json('tempfiles/projections.json')
+    jsonTocsv.to_csv('tempfiles/projections.csv',index=False)
+
+    #fill player positions
+    gks = list(filter(lambda d: d['pos'] == 'GK', all_players))
+    defs = list(filter(lambda d: d['pos'] == 'D', all_players))
+    mids = list(filter(lambda d: d['pos'] == 'M', all_players))
+    fwds = list(filter(lambda d: d['pos'] == 'F', all_players))
+
+    gks = sorted(gks,key=lambda k: k['ppp'],reverse=True)
+    defs = sorted(defs,key=lambda k: k['ppp'],reverse=True)
+    mids = sorted(mids,key=lambda k: k['ppp'],reverse=True)
+    fwds = sorted(fwds,key=lambda k: k['ppp'],reverse=True)
+
+    counter = 0
+
+    start = time.time()
+    print("run simulation")
+    team = getGKAndHandcuff(gks[0],gks)+defs[0:5]+mids[0:5]+fwds[0:3]
+    #print(team)
+    
+    if(isLegal(team,1000)):
+        team = findBestFormation(team)
+        drawTeam(team[2],team[0],'smart_suggest',[])
+        
+    else:
+        print("not legal")
+
+    
+    posMap = {
+        'GK':gks,
+        'D':defs,
+        'M':mids,
+        'F':fwds
+    }
+    team = team[0]
+    replacementIndex = 0
+    while(counter < attempts):
+        print("-------------"+str(replacementIndex)+"----------loop-----"+str(counter)+"-----------------")
+        #print(team)
+        counter += 1
+        #find lowest performer
+        print("find lowest performer")
+        weakestLink = sorted(team[2:],key=lambda k: k['pts'],reverse=True)[replacementIndex]
+        print(weakestLink)
+
+        #find next replacement
+        replacement = next((obj for obj in posMap[weakestLink['pos']] if obj['pts'] > weakestLink['pts'] and obj not in team),-1)
+        if(replacement == -1):
+            print("no replacement found")
+            replacementIndex += 1
+            if replacementIndex > 12:
+                replacementIndex = 0
+        else:
+            print(team.index(weakestLink))
+            print(replacement)
+            
+            team[team.index(weakestLink)] = replacement
+
+            if(isLegal(team,1000)):
+                team = findBestFormation(team)
+                drawTeam(team[2],team[0],'v4_smart_suggest_'+ str(counter),[])
+                team = team[0]
+            else:
+                team[team.index(replacement)] = weakestLink
+                replacementIndex += 1
+                if replacementIndex > 12:
+                    replacementIndex = 0
+        
+    
+    return team
+    """while(counter < attempts):
+       
+        counter += 1
+        team = pickTeam(gks,defs,mids,fwds)
+        if(team[1] > best_points):
+            best_team = team[0]
+            best_points = team[1]
+            best_formation = team[2]
+    end = time.time()
+
+    print('Finished ' + str(attempts) + ' in ' + str((end - start)) + ' seconds') 
+    print('------------')
+    print('------------')
+    print(best_points)
+    print('------------')
+    print(best_formation)
+    print('------------')
+    print(end)
+
+    drawTeam(best_formation,best_team,'smart_suggest',[])
+    return best_team"""
+
+
 
 #buildSquad(100)

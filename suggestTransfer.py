@@ -54,6 +54,7 @@ def suggestTransfers(players,free_transfers,capital):
 
     best_pts = current_pts
     take_hit = False
+    best_team = []
 
     for t in transfer_suggestions:
         temp = findBestFormation(t)
@@ -67,6 +68,9 @@ def suggestTransfers(players,free_transfers,capital):
     many_transfers = 0
     while(free_transfers > many_transfers):
         many_transfers += 1
+    #TODO need to fix many transfers
+    #
+    #many_transfers = False
     if(many_transfers):
         take_hit = False
         for index, p in enumerate(best_team):

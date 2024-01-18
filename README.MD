@@ -8,3 +8,8 @@ This table has matched ids for the understat data and the fpl data.  Players fro
 
 ## Running
 Run runMe.py to run the projections.  It will gather the data and make projections.  These are the projections used for the  [FPL-Bot](https://www.thefplbot.com/)
+
+## Every year
+update league id
+update bot id
+update years / automate
