@@ -16,10 +16,10 @@ week = getNextGameWeek()
 if_getData = False
 teamToGet = 576373
 
-if_suggestTransfers = False
-if_makeTeamFromScratch = False
-if_drawRankings = False
-if_drawBotsLeague = False
+if_suggestTransfers = True
+if_makeTeamFromScratch = True
+if_drawRankings = True
+if_drawBotsLeague = True
 if_checkBets = True
 
 if if_getData:
