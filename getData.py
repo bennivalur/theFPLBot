@@ -6,7 +6,6 @@ import urllib.request
 import aiohttp
 from datetime import datetime
 from getLeagueResults import getSeasons
-from predictCS import getRangeStart,getNextGameWeek
 import requests
 from understat import Understat
 
@@ -24,7 +23,51 @@ async def main():
         players = json.dumps(players)
         with open('tempfiles/understat.json', 'w') as file:
             file.write(players)
-        
+
+
+def getNextGameWeek():
+    fpl = urllib.request.urlopen("https://fantasy.premierleague.com/api/bootstrap-static/").read()
+    fpl = json.loads(fpl)
+    fpl_players = fpl['elements']
+
+    _events = fpl['events']
+    
+    for e in _events:
+        if(e['is_next']):
+            return e['id']
+
+def getGameWeek(week):
+    with open('tempfiles/events.json', 'r') as all_games:
+        games = json.load(all_games)
+    
+    return games[week]
+
+
+def getFix():
+    with open('tempfiles/fixtures.json', 'r') as all_games:
+        games = json.load(all_games)
+    
+    return games
+
+
+def getRangeStart(form_range):
+    week = getNextGameWeek()
+
+    return getGameWeek(week-form_range)['deadline_time']
+
+def fplFixtures(isAllSeason):
+    fpl = urllib.request.urlopen("https://fantasy.premierleague.com/api/fixtures/").read()
+    fpl = json.loads(fpl)
+    if not isAllSeason:
+        fixtures = [x for x in fpl if x['finished'] == False and x['kickoff_time'] != None]
+        results = json.dumps(fixtures)
+        with open('tempfiles/fixtures.json', 'w') as file:
+            file.write(results)
+    else:
+        results = json.dumps(fpl)
+        with open('tempfiles/all_fpl_fixtures.json', 'w') as file:
+            file.write(results)
+
 def getFPL():
     print("Get FPL")
     fpl = urllib.request.urlopen("https://fantasy.premierleague.com/api/bootstrap-static/").read()

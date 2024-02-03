@@ -1,7 +1,8 @@
-from getData import getData, findMissingPlayers,getFPL,getLeague
+from getData import getData, findMissingPlayers,getFPL,getLeague,getNextGameWeek
 from projections import makeProjections
 from getLeagueResults import getSeasons
-from predictCS import predictCS, getNextGameWeek, checkBets, checkBetResults
+from predictCS import predictCS
+from checkOdds import checkBets, checkBetResults
 from fpl import buildSquad, buildSmartSquad
 from suggestTransfer import suggestTransfers,getTeam,convertFPLteam
 from drawTeam import drawTeam
@@ -17,7 +18,7 @@ if_getData = False
 teamToGet = 576373
 
 if_suggestTransfers = True
-if_makeTeamFromScratch = True
+if_makeTeamFromScratch = False
 if_drawRankings = True
 if_drawBotsLeague = True
 if_checkBets = True

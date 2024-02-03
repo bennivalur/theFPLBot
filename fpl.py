@@ -321,27 +321,6 @@ def buildSmartSquad(attempts):
         
     
     return team
-    """while(counter < attempts):
-       
-        counter += 1
-        team = pickTeam(gks,defs,mids,fwds)
-        if(team[1] > best_points):
-            best_team = team[0]
-            best_points = team[1]
-            best_formation = team[2]
-    end = time.time()
-
-    print('Finished ' + str(attempts) + ' in ' + str((end - start)) + ' seconds') 
-    print('------------')
-    print('------------')
-    print(best_points)
-    print('------------')
-    print(best_formation)
-    print('------------')
-    print(end)
-
-    drawTeam(best_formation,best_team,'smart_suggest',[])
-    return best_team"""
 
 
 
