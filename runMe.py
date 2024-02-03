@@ -13,47 +13,60 @@ import pandas as pd
 form_range = 5
 
 week = getNextGameWeek()
-print("Getting data for week: " + str(week))
-getData(week)
+if_getData = False
+teamToGet = 576373
 
-#Logs players who have played in the PL this season but do not yet hava an ID match in our match file
-findMissingPlayers()
+if_suggestTransfers = False
+if_makeTeamFromScratch = False
+if_drawRankings = False
+if_drawBotsLeague = False
+if_checkBets = True
 
-#Predict clean sheet odds
-predictCS()
+if if_getData:
+    print("Getting data for week: " + str(week))
+    getData(week)
 
-makeProjections()
+    #Logs players who have played in the PL this season but do not yet hava an ID match in our match file
+    findMissingPlayers()
 
-#Get players on the team of the bot
-team = getTeam(576373,week-1)
-squad = convertFPLteam(team['picks'])
+    #Predict clean sheet odds
+    predictCS()
 
-capital = team['entry_history']['value'] ##+ team['entry_history']['bank']
-print("capital:" + str(capital))
+    makeProjections()
 
+if teamToGet != -1 and if_suggestTransfers:
+    #Get players on the team of the bot
+    team = getTeam(teamToGet,week-1)
+    #team = getTeam(31003,week-1)
+    squad = convertFPLteam(team['picks'])
+
+    capital = team['entry_history']['value'] ##+ team['entry_history']['bank']
+    print("capital:" + str(capital))
+    suggested = suggestTransfers(squad,1,capital)
+    drawTeam(suggested[0],suggested[1],'week_' + str(week) + '_transfers',suggested[2])
+    
 #Only for preseason or wildcard - builds a squad from scratch
-#squad = buildSquad(200000000)
-#squad = buildSmartSquad(1000)
+if if_makeTeamFromScratch:
+    
+    squad = buildSquad(1000)
+    capital = 100
+    squad = buildSmartSquad(1000)
+    drawTeam(suggested[0],suggested[1],'preseason23_24',suggested[2])
 
-suggested = suggestTransfers(squad,1,capital)
-drawTeam(suggested[0],suggested[1],'week_' + str(week) + '_transfers',suggested[2])
-#drawTeam(suggested[0],suggested[1],'preseason23_24',suggested[2])
-
-
-#Draw position rankings
-drawRankings('GK',week,10)
-drawRankings('D',week,15)
-drawRankings('M',week,15)
-drawRankings('F',week,15)
-
-
+if if_drawRankings:
+    #Draw position rankings
+    drawRankings('GK',week,10)
+    drawRankings('D',week,15)
+    drawRankings('M',week,15)
+    drawRankings('F',week,15)
 
 #Get latest standings for the BotsVsBots league
-getLeague(106519)
-drawLeague(week)
+if if_drawBotsLeague:
+    getLeague(106519)
+    drawLeague(week)
 
 #compare my models odds of keeping a clean sheet to the odds of lengjan.is
-
-checkBets()
-#Input = betting_amount,bet_margin
-#checkBetResults(10000,0.00)
+if if_checkBets:
+    checkBets()
+    #Input = betting_amount,bet_margin
+    checkBetResults(10000,0.00)

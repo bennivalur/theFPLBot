@@ -106,6 +106,12 @@ def calcOdds(xGSum):
         return 0
     return odds
 
+def calcWinOdds(xGSum):
+    odds = (xGSum  * 0.116178) + 0.392198
+    if odds <= 0:
+        return 0
+    return odds
+
 def getNextGameWeek():
     fpl = urllib.request.urlopen("https://fantasy.premierleague.com/api/bootstrap-static/").read()
     fpl = json.loads(fpl)
@@ -193,15 +199,18 @@ def predictCS():
         homeOdds = round(calcOdds(awayXG['xG']+homeXG['xGA']),2)
         awayOdds = round(calcOdds(homeXG['xG']+awayXG['xGA']),2)
 
-        allOdds.append({'team':g[0]['title'],'opponent':g[1]['title'],'csOdds':homeOdds,'code':g[2]['code']})
-        allOdds.append({'team':g[1]['title'],'opponent':g[0]['title'],'csOdds':awayOdds,'code':g[2]['code']})
+        homeWinOdds = round(calcWinOdds((homeXG['xG']+awayXG['xGA']) - (awayXG['xG']+homeXG['xGA'])),2)
+        awayWinOdds = round(calcWinOdds((awayXG['xG']+homeXG['xGA']) - (homeXG['xG']+awayXG['xGA'])),2)
+
+        allOdds.append({'team':g[0]['title'],'opponent':g[1]['title'],'csOdds':homeOdds,'winOdds':homeWinOdds,'code':g[2]['code']})
+        allOdds.append({'team':g[1]['title'],'opponent':g[0]['title'],'csOdds':awayOdds,'winOdds':awayWinOdds,'code':g[2]['code']})
 
     with open('tempfiles/clean_sheet_odds.json', 'w') as file:
         file.write(json.dumps(allOdds))
 
 def checkBetResults(bet_amount,odds_margin):
     #fplFixtures(True)
-    print("chekking bet results")
+    print("checking bet results")
     
     with open('tempfiles/bet_scheme.json', 'r') as all_bets:
         bets = json.load(all_bets)
