@@ -14,7 +14,7 @@ import pandas as pd
 form_range = 5
 
 week = getNextGameWeek()
-if_getData = False
+if_getData = True
 teamToGet = 576373
 
 if_suggestTransfers = True
