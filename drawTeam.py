@@ -218,7 +218,7 @@ def drawTeam(formation, players,file_name,transfers):
 
     #Points and cost
     draw.rectangle((0, field_length-400, field_width, field_length-300), fill=(46, 162, 219), outline=(5, 47, 82),width=10)
-    txt = 'Points: ' + str(round(pts,2)) + ' | Cost: ' + str(round(cost,2))
+    txt = 'Expected Points: ' + str(round(pts,2)) + ' | Cost: ' + str(round(cost,2))
     draw.text((field_width/2,field_length-340),txt,(0,0,0),anchor='ms',font=font)
 
     #Draw Tranfer section if transfers were made
@@ -231,7 +231,7 @@ def drawTeam(formation, players,file_name,transfers):
             draw.polygon([(field_width+175,field_length/2 - 145), (field_width+125, field_length/2-120), (field_width+175,field_length/2-95)], fill = (0,0,0))
 
             draw.rectangle((field_width+175,field_length/2-185, field_width+250, field_length/2-165), fill='black')
-            draw.rectangle((field_width+175,field_length/2-110, field_width+250, field_length/2-130), fill='black')
+            draw.rectangle((field_width+175,field_length/2-130, field_width+250, field_length/2-110), fill='black')
 
             draw.arc((field_width+225,field_length/2-150, field_width+265,field_length/2-110),  -30, 90, 'black',width=30)
             draw.arc((field_width+155,field_length/2-185, field_width+195,field_length/2-145),  120, -90, 'black',width=30)
