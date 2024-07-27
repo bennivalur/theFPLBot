@@ -21,7 +21,7 @@ if_suggestTransfers = True
 if_makeTeamFromScratch = False
 if_drawRankings = True
 if_drawBotsLeague = True
-if_checkBets = True
+if_checkBets = False
 
 if if_getData:
     print("Getting data for week: " + str(week))
