@@ -1,0 +1,424 @@
+understat_id,player_name,fpl_id,web_name,fpl_code
+65,Timo Werner,776,Werner,165153
+76,Fabian Schär,415,Schär,119471
+87,Joelinton,403,Joelinton,180974
+205,Mahmoud Dahoud,119,Dahoud,168090
+239,Pascal Groß,125,Gross,60307
+343,Pierre-Emile Højbjerg,490,Højbjerg,132015
+447,Kevin De Bruyne,345,De Bruyne,61366
+453,Son Heung-Min,503,Son,85971
+468,Callum Wilson,421,Wilson,75115
+486,Adam Lallana,463,Lallana,39155
+489,James Milner,142,Milner,15157
+500,Alex Iwobi,247,Iwobi,153133
+501,Danny Welbeck,148,Welbeck,50175
+528,Angelo Ogbonna,577,Ogbonna,40669
+531,Michail Antonio,512,Antonio,57531
+534,Aaron Cresswell,517,Cresswell,55459
+556,Marcus Rashford,385,Rashford,176297
+579,Nathan Aké,341,Aké,126184
+585,Seamus Coleman,221,Coleman,59949
+586,John Stones,362,Stones,97299
+592,Ross Barkley,630,Barkley,88894
+603,Nathaniel Clyne,196,Clyne,57328
+618,Raheem Sterling,186,Sterling,103955
+631,Ashley Young,588,Young,18892
+638,Kyle Walker,363,Walker,58621
+646,Christian Eriksen,370,Eriksen,80607
+652,Kieran Trippier,418,Trippier,77794
+660,Ben Davies,484,Davies,115556
+675,Jack Grealish,349,Grealish,114283
+700,Willian,591,Willian,47431
+706,Lukasz Fabianski,521,Fabianski,37096
+712,Jack Cork,163,Cork,40145
+725,Ola Aina,604,Aina,159506
+741,Jordan Pickford,235,Pickford,111234
+757,Jeffrey Schlupp,214,Schlupp,86417
+766,Jamaal Lascelles,407,Lascelles,101148
+775,Andros Townsend,727,Townsend,60252
+782,Ben Chilwell,160,Chilwell,172850
+804,Craig Dawson,551,Dawson,60232
+807,Jonny Evans,703,Evans,37642
+825,Adam Smith,81,Smith,54469
+833,Virgil van Dijk,339,Virgil,97032
+843,James Ward-Prowse,664,Ward-Prowse,101178
+884,Matt Targett,416,Targett,169359
+900,Adama Traoré,239,Adama,159533
+910,Harrison Reed,254,Reed,153366
+922,Andreas Pereira,240,Andreas,156689
+935,Kurt Zouma,532,Zouma,103192
+985,Mason Holgate,225,Holgate,194164
+986,Danny Ings,535,Ings,84939
+998,Ivan Toney,108,Toney,144485
+1006,Luke Shaw,387,Shaw,106760
+1018,Josh Cullen,165,Cullen,172567
+1024,Tyrone Mings,49,Mings,149484
+1228,Bruno Fernandes,366,B.Fernandes,141746
+1250,Mohamed Salah,328,M.Salah,118748
+1257,Alisson,310,A.Becker,116535
+1653,Michael Keane,228,Keane,106611
+1654,Ben Mee,100,Mee,51927
+1663,Johann Berg Gudmundsson,170,Gudmundsson,60586
+1665,James Tarkowski,236,Tarkowski,17761
+1679,Dominic Solanke,82,Solanke,154566
+1687,Harry Maguire,387,Maguire,95658
+1688,Andrew Robertson,335,Robertson,122798
+1726,Abdoulaye Doucouré,217,A.Doucoure,121599
+1736,Oliver McBurnie,485,McBurnie,169432
+1771,Reece Burke,318,Burke,156658
+1776,Jarrod Bowen,514,Bowen,178186
+1789,Lewis Cook,64,Cook,155408
+1791,Trent Alexander-Arnold,311,Alexander-Arnold,169187
+1823,Lucas Digne,36,Digne,101188
+2182,Jefferson Lerma,231,Lerma,152551
+2199,Pablo Sarabia,565,Sarabia,88484
+2248,Casemiro,368,Casemiro,61256
+2254,Mateo Kovacic,354,Kovačić,91651
+2310,Alphonse Areola,513,Areola,84182
+2383,André Gomes,244,André Gomes,120250
+2496,Rodri,360,Rodrigo,220566
+2517,Martin Odegaard,13,Ødegaard,184029
+2958,Oleksandr Zinchenko,25,Zinchenko,206325
+3203,Issa Diop,245,Diop,219924
+3278,Maxwel Cornet,515,Cornet,149519
+3300,Christopher Nkunku,212,Nkunku,213198
+3621,Neal Maupay,229,Maupay,115382
+3635,Bernardo Silva,342,Bernardo,165809
+3697,Odsonne Edouard,198,Edouard,199670
+4105,Raúl Jiménez,252,Raúl,102057
+4120,Álex Moreno,26,Alex Moreno,106468
+4401,Emiliano Martinez,47,Martinez,98980
+5050,Clement Lenglet,699,Lenglet,171101
+5136,Estupiñán,122,Estupiñan,204214
+5220,Kai Havertz,4,Havertz,219847
+5221,Leon Bailey,28,Bailey,215711
+5232,Alexander Isak,401,Isak,219168
+5355,Jacob Bruun Larsen,608,Bruun Larsen,179458
+5543,Gabriel Jesus,2,G.Jesus,205651
+5552,Nick Pope,413,Pope,98747
+5553,Declan Rice,16,Rice,204480
+5555,Dominic Calvert-Lewin,220,Calvert-Lewin,177815
+5560,Scott McTominay,381,McTominay,195851
+5568,Connor Roberts,176,Roberts,192290
+5569,Rhian Brewster,477,Brewster,195473
+5584,Aaron Wan-Bissaka,388,Wan-Bissaka,214590
+5590,Tosin Adarabioyo,187,Tosin,109646
+5596,Harry Wilson,259,Wilson,153682
+5603,Aaron Ramsdale,14,Ramsdale,225321
+5609,Yves Bissouma,482,Bissouma,227127
+5681,Giovani Lo Celso,503,Lo Celso,200826
+5712,Diego Carlos,35,Diego Carlos,165659
+5722,Ibrahim Sangare,713,Sangaré,210462
+5735,Jean-Philippe Mateta,207,Mateta,231747
+5786,Yoane Wissa,110,Wissa,216646
+5803,Fode Toure,707,Ballo-Touré,225897
+5956,Youri Tielemans,58,Tielemans,166989
+5973,Kenny Tete,257,Tete,167074
+5989,Moussa Niakhate,457,Niakhaté,199170
+6026,Richarlison,497,Richarlison,212319
+6030,Zanka,112,Zanka,48760
+6034,Philip Billing,76,Philip,168991
+6044,Charlie Taylor,178,Taylor,103914
+6048,Lewis Dunk,120,Dunk,83299
+6049,Solly March,132,March,109345
+6054,Ederson,347,Ederson M.,121160
+6055,Phil Foden,348,Foden,209244
+6108,Rodrigo Bentancur,480,Bentancur,202993
+6157,Timothy Castagne,688,Castagne,166477
+6163,Nélson Semedo,559,N.Semedo,200402
+6221,Pau Torres,584,Pau,244954
+6326,Ibrahima Konaté,326,Konaté,204716
+6345,Jadon Sancho,386,Sancho,209243
+6420,Romain Faivre,799,Faivre,441240
+6456,Callum Hudson-Odoi,205,Hudson-Odoi,209046
+6482,Eddie Nketiah,11,Nketiah,205533
+6490,Manuel Akanji,340,Akanji,211975
+6492,Reiss Nelson,578,Nelson,200641
+6532,Martin Dubravka,396,Dúbravka,67089
+6552,Bryan Mbeumo,99,Mbeumo,446008
+6556,Moussa Diaby,599,Diaby,243557
+6557,Louis Beyer,160,Beyer,241231
+6615,Trevoh Chalobah,159,Chalobah,180736
+6630,Joe Willock,420,Willock,200089
+6674,Rayan Ait Nouri,533,Aït-Nouri,448514
+6681,Harvey Barnes,392,Barnes,201666
+6686,Nicolo Zaniolo,672,Zaniolo,245414
+6691,Dejan Kulusevski,492,Kulusevski,445044
+6722,Konstantinos Mavropanos,676,Mavropanos,233963
+6818,James Maddison,494,Maddison,172780
+6835,Tom Cairney,243,Cairney,76357
+6850,Willy Boly,425,Boly,90585
+6852,Matt Doherty,598,Doherty,87835
+6854,Diogo Jota,317,Diogo J.,194634
+6857,Morgan Gibbs-White,447,Gibbs-White,222531
+6885,Axel Disasi,611,Disasi,220362
+6888,William Saliba,18,Saliba,462424
+6903,Matz Sels,443,Sels,85633
+6912,Pedro Porro,495,Pedro Porro,441164
+6963,Justin Kluivert,72,Kluivert,222683
+7027,Arijanet Muric,568,Muric,232917
+7047,Mark Flekken,101,Flekken,118342
+7069,Saman Ghoddos,701,Ghoddos,205836
+7080,Matheus Cunha,590,Cunha,430871
+7134,Marc Cucurella,163,Cucurella,179268
+7184,Tim Ream,253,Ream,82514
+7187,Sergio Reguilón,508,Reguilón,199249
+7198,Oliver Skipp,501,Skipp,209042
+7218,Cristian Romero,498,Romero,221632
+7230,Emile Smith-Rowe,19,Smith Rowe,209289
+7235,Jason Steele,142,Steele,49262
+7236,Leander Dendoncker,33,Dendoncker,151589
+7240,Benoit Badiashile Mukinayi,153,B.Badiashile,242880
+7264,Han-Noah Massengo,694,Massengo,437757
+7277,Ryan John Giles,553,Giles,232351
+7281,Diogo Dalot,369,Dalot,216051
+7298,Ben White,24,White,198869
+7322,Bukayo Saka,17,Saka,223340
+7332,Max Kilman,524,Kilman,214048
+7338,Bryan Gil Salvatierra,483,Bryan,436234
+7352,Tyler Adams,60,Adams,200785
+7365,Lucas Paquetá,527,L.Paquetá,224024
+7382,Dan Burn,395,Burn,78916
+7384,Chris Mepham,72,Mepham,223911
+7395,Carlos Vinicius,258,Vinicius,245824
+7420,Miguel Almirón,391,Almirón,179018
+7439,Tahith Chong,586,Chong,222677
+7498,Lyle Foster,168,Foster,435973
+7546,Harvey Elliott,319,Elliott,444884
+7582,Mark Travers,84,Travers,229600
+7603,Marc Guehi,200,Guéhi,209036
+7688,Max Aarons,643,Aarons,232980
+7698,Leandro Trossard,23,Trossard,116216
+7699,Adam Webster,147,Webster,110735
+7702,Dean Henderson,385,Henderson,172649
+7706,George Baldock,473,Baldock,82691
+7710,Oliver Norwood,488,Norwood,79934
+7714,Ben Osborn,489,Osborn,167878
+7726,Ezri Konsa Ngoyo,44,Konsa,199798
+7752,Gabriel Martinelli,9,Martinelli,444145
+7762,Jean-Ricner Bellegarde,715,Bellegarde,231057
+7768,Mason Mount,382,Mount,184341
+7814,Taiwo Awoniyi,424,Awoniyi,210156
+7931,Takehiro Tomiyasu,22,Tomiyasu,223723
+7943,Igor Julio,606,Igor,223434
+7958,Sandro Tonali,417,Tonali,432422
+7988,Billy Gilmour,124,Gilmour,243568
+8066,Arnaut Danjuma Groeneveld,601,Danjuma,220307
+8067,Reece James,172,James,225796
+8127,Amad Diallo Traore,371,Amad,493250
+8150,Anthony Gordon,412,Gordon,232826
+8204,Neco Williams,437,N.Williams,215136
+8214,Tyrick Mitchell,210,Mitchell,244723
+8226,Tariq Lamptey,131,Lamptey,232792
+8252,Nicolás Domínguez,712,Dominguez,250199
+8260,Erling Haaland,351,Haaland,223094
+8272,João Pedro,135,João Pedro,475168
+8285,Sander Berge,475,Berge,207189
+8286,Jack Robinson,576,Robinson,83427
+8288,Tomas Soucek,530,Souček,215439
+8323,Josh Brownhill,161,Brownhill,172782
+8327,Bruno Guimarães,394,Bruno G.,208706
+8379,Alexis Mac Allister,329,Mac Allister,243016
+8384,Armando Broja,156,Broja,440323
+8430,Chris Richards,194,C.Richards,427623
+8476,Jarrad Branthwaite,245,Branthwaite,480455
+8496,Tommy Doyle,351,Doyle,220394
+8497,Cole Palmer,182,Palmer,244851
+8562,Luke Thomas,693,Thomas,244619
+8635,Sven Botman,393,Botman,220237
+8666,Cheick Oumar Doucoure,193,C.Doucouré,438464
+8706,Eberechi Eze,199,Eze,232413
+8719,Kalvin Phillips,359,Phillips,155405
+8720,Jack Harrison,661,Harrison,221399
+8756,Dara O&#039;Shea,173,O'Shea,216616
+8776,Wes Foderingham,482,Foderingham,82143
+8778,Fabio Silva,545,Fábio Silva,449988
+8780,Joël Veltman,145,Veltman,111478
+8786,Stefan Ortega Moreno,358,Ortega Moreno,88248
+8808,Wataru Endo,668,Endo,158983
+8812,Sasa Kalajdzic,555,Kalajdžić,429414
+8831,Iyenoma Destiny Udogie,519,Udogie,487053
+8845,Hee-Chan Hwang,550,Hee Chan,184754
+8852,Konstantinos Tsimikas,337,Tsimikas,214285
+8858,Guglielmo Vicario,520,Vicario,184254
+8859,Mikkel Damsgaard,89,Damsgaard,440089
+8864,Matthew Cash,32,Cash,199796
+8865,Ollie Watkins,58,Watkins,178301
+8918,Max Lowe,484,Lowe,155197
+8923,Ivo Grbic,790,Grbić,173268
+8940,Antonee Robinson,255,Robinson,169528
+8942,Aaron Hickey,93,Hickey,472713
+8961,Rúben Dias,361,Rúben,171314
+8965,Vladimir Coufal,516,Coufal,164555
+8981,Jéremy Doku,678,Doku,248875
+9017,Malo Gusto,203,Gusto,482609
+9021,Pape Sarr,499,Sarr,482442
+9040,Conor Gallagher,169,Gallagher,232787
+9077,James Trafford,596,Trafford,432720
+9098,Robert Sánchez,185,Sánchez,215059
+9105,Radu Dragusin,777,Drăgușin,493125
+9154,Elliot Anderson,423,Anderson,215379
+9156,Kevin Schade,106,Schade,513418
+9205,Jayden Bogle,476,Bogle,226182
+9274,Naouirou Ahamada,190,Ahamada,466117
+9284,Jakub Moder,144,Moder,243505
+9324,Facundo Pellistri,384,Pellistri,488404
+9332,Dane Scarlett,500,Scarlett,490145
+9356,Carney Chukwuemeka,161,Chukwuemeka,478912
+9415,Jaden Philogene-Bidace,569,Jaden,481624
+9451,Chimuanya Ugochukwu,188,Ugochukwu,503714
+9453,Moisés Caicedo,157,Caicedo,486672
+9461,Jesurun Rak-Sakyi,213,Rak-Sakyi,450542
+9512,Valentino Livramento,633,Livramento,441191
+9524,Anthony Elanga,432,Elanga,449434
+9554,Tim Iroegbunam,46,Iroegbunam,490094
+9556,William Osula,490,Osula,538207
+9558,Hannibal Mejbri,383,Hannibal,465527
+9619,Issa Kabore,602,Kaboré,476369
+9662,Dango Ouattara,74,O.Dango,533463
+9667,Amadou Onana,233,Onana,449871
+9676,David Raya,15,Raya,154561
+9677,Kristoffer Ajer,86,Ajer,191866
+9678,Ethan Pinnock,104,Pinnock,231065
+9679,Rico Henry,92,Henry,194010
+9680,Vitaly Janelt,94,Janelt,204580
+9681,Frank Onyeka,102,Onyeka,428580
+9685,Mads Roerslev,105,Roerslev,226956
+9689,Albert Sambi Lokonga,21,Sambi,437742
+9691,Nuno Tavares,23,Tavares,437626
+9733,Nathan Collins,96,Collins,432830
+9740,José Sá,554,José Sá,149065
+9788,Dominik Szoboszlai,309,Szoboszlai,424876
+9790,Josko Gvardiol,616,Gvardiol,477424
+9833,Andrew Omobamidele,711,Omobamidele,466404
+9834,Remi Matthews,209,Matthews,169593
+9897,Gonzalo Montiel,679,G.Montiel,218430
+9912,Cameron Archer,27,Archer,433979
+9913,Aaron Ramsey,675,A.Ramsey,447715
+9959,Joe White,419,White,461484
+9983,Beto,691,Beto,486385
+10027,Lewis Dobbin,624,Dobbin,461421
+10041,Yasser Larouci,592,Larouci,432990
+10048,Nicolas Jackson,211,N.Jackson,517052
+10050,Micky van de Ven,639,Van de Ven,491279
+10118,Kaide Gordon,783,Gordon,496185
+10119,Owen Beck,782,Beck,430992
+10120,Conor Bradley,757,Bradley,492777
+10126,James McAtee,360,McAtee,432714
+10177,Evan Ferguson,123,Ferguson,487117
+10187,Jarell Quansah,626,Quansah,441428
+10205,Myles Peart-Harris,744,Peart-Harris,450539
+10291,Vitalii Mykolenko,231,Mykolenko,224967
+10292,Nathan Patterson,234,Patterson,243571
+10293,Toti,567,Toti,510362
+10386,Anel Ahmedhodzic,471,Ahmedhodžić,233821
+10405,Josh Dasilva,90,Dasilva,183656
+10408,Luis Díaz,327,Luis Díaz,244731
+10433,Cesare Casadei,791,Casadei,505187
+10527,Carlos Baleba,690,Baleba,535301
+10552,Alejandro Garnacho,372,Garnacho,493105
+10697,Ryan Gravenberch,708,Gravenberch,441266
+10700,Matt Turner,28,Turner,224068
+10716,Manor Solomon,502,Solomon,235674
+10717,Rodrigo Muniz,279,Muniz,244042
+10720,Darwin Núñez,316,Darwin,447203
+10723,Stefan Bajcetic,312,Bajcetic,535928
+10741,Marcus Tavernier,83,Tavernier,201658
+10744,Ryan Christie,63,Christie,158499
+10747,James Hill,69,Hill,463981
+10756,Joe Worrall,448,Worrall,208912
+10758,Harry Toffolo,444,Toffolo,114241
+10802,Lisandro Martínez,380,Martinez,221820
+10805,Levi Colwill,197,Colwill,460028
+10806,Kaoru Mitoma,136,Mitoma,451340
+10807,Jan Paul van Hecke,144,Van Hecke,469142
+10822,Wilson Odobert,660,Odobert,550839
+10846,Julián Álvarez,352,J.Alvarez,461358
+10864,Marcos Senesi,79,Senesi,221466
+10866,Luis Sinisterra,705,Sinisterra,224995
+10872,Vinicius Souza,638,Vini Souza,424001
+10913,André Onana,597,Onana,202641
+10945,Santiago Bueno,697,S.Bueno,231480
+10997,Bobby Clark,627,Clark,491970
+11003,Ryan Yates,449,Yates,204968
+11055,Rasmus Højlund,617,Højlund,497894
+11094,Antony,365,Antony,467169
+11174,Kobbie Mainoo,378,Mainoo,516895
+11210,Nathan Fraser,704,Fraser,531363
+11231,Ben Doak,318,Doak,496208
+11232,Thomas Cannon,286,Cannon,461416
+11268,David Ozoh,721,Ozoh,531989
+11269,Jack Hinshelwood,621,Hinshelwood,532529
+11305,Mykhailo Mudryk,179,Mudryk,465920
+11317,Danilo,429,Danilo,513046
+11356,Enzo Fernández,168,Enzo,448047
+11357,Noni Madueke,177,Madueke,248857
+11361,Daniel Bentley,536,Bentley,79602
+11362,Facundo Buonanotte,117,Buonanotte,536916
+11363,Antoine Semenyo,78,Semenyo,437730
+11366,Jhon Durán,38,Duran,476344
+11386,Lewis Miley,635,Miley,547719
+11486,Illia Zabarnyi,85,Zabarnyi,477580
+11487,Michael Olakigbe,620,Olakigbe,501284
+11595,Alfie Gilchrist,716,Gilchrist,514280
+11699,Ameen Al Dakhil,157,Al-Dakhil,487968
+11700,Vitinho,182,Vitinho,441455
+11701,Zeki Amdouni,594,Amdouni,492831
+11703,Anass Zaroury,184,Zaroury,511783
+11704,Hjalmar Ekdal,167,Ekdal,478969
+11707,Jurriën Timber,6,J.Timber,445122
+11709,Milos Kerkez,595,Kerkez,544877
+11710,Simon Adingra,113,Adingra,535818
+11711,Bart Verbruggen,146,Verbruggen,489639
+11712,Thomas Kaminski,614,Kaminski,54738
+11713,Amari&#039;i Bell,316,Bell,165183
+11715,Mads Andersen,315,Andersen,208904
+11716,Pelly Ruddock Mpanzu,582,Mpanzu,104047
+11717,Carlton Morris,326,Morris,156700
+11718,Elijah Adebayo,314,Adebayo,174310
+11719,Chiedozie Ogbene,328,Ogbene,229164
+11720,Jacob Brown,631,Brown,242453
+11721,Cauley Woodrow,340,Woodrow,91046
+11722,Luke Berry,317,Berry,82738
+11723,Alfie Doughty,321,Doughty,244262
+11728,Calvin Bassey,610,Bassey,232892
+11730,Anis Ben Slimane,587,Slimane,504198
+11731,Andre Brooks,655,Brooks,538210
+11732,Auston Trusty,27,Trusty,201410
+11772,Yehor Yarmolyuk,120,Yarmoliuk,508395
+11807,Ian Maatsen,609,Maatsen,441302
+11808,Andrey Santos,150,Andrey Santos,532605
+11811,James McConnell,330,McConnell,491501
+11815,Ben Brereton Díaz,775,Brereton Díaz,204814
+11839,Gustavo Hamer,663,Hamer,196100
+11903,Oscar Bobb,345,Bobb,477555
+11926,Edson Álvarez,642,Álvarez,213999
+11984,Youssef Chermiti,645,Y. Chermiti,491012
+11987,Daniel Gore,685,Gore,504598
+11998,Hannes Delcroix,674,Delcroix,247245
+12027,Mohammed Kudus,689,Kudus,460842
+12032,Djordje Petrovic,687,Petrović,457569
+12033,Deivid Washington,165,Deivid,617054
+12034,Brandon Aguilera,434,B.Aguilera,461682
+12047,Enso González,547,Gonzalez,593001
+12073,Teden Mengi,393,Mengi,244856
+12094,Mike Trésor,706,M.Trésor,437748
+12105,Alejo Véliz,641,Veliz,536908
+12118,Jamie Donley,722,Donley,513588
+12123,Murillo,696,Murillo,575476
+12149,Alex Scott,644,Scott,503139
+12151,Gabriel Osho,330,Osho,199056
+12152,Matheus França,615,Matheus França,536694
+12187,Jordan Clark,320,Clark,96784
+12199,Alex Murphy,390,A.Murphy,545477
+12204,Benicio Baker-Boaitey,742,Baker-Boaitey,475480
+12234,Tawanda Chirewa,750,Chirewa,497606
+12275,Willy Kambwala,766,Kambwala,518466
+12291,Rhys Norrington-Davies,487,Norrington-Davies,443211
+12340,Omari Forson,632,Forson,487828
+12408,Daniel Muñoz,211,Muñoz,247348
+12409,Adam Wharton,216,Wharton,496221
+12412,Morgan Rogers,54,Rogers,244850
+12474,George Earthy,519,Earthy,490885
+12498,Valentín Barco,116,Barco,543158
+12532,Leon Chiwome,539,Chiwome,589507

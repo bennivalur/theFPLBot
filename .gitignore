@@ -1,0 +1,7 @@
+*.png
+*.ttf
+*pycache/
+*.pyc
+env/
+data/
+maindata*

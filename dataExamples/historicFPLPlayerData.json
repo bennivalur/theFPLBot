@@ -1,0 +1,31 @@
+[
+    {
+        "season_name": "2018/19",
+        "element_code": 179018,
+        "start_cost": 60,
+        "end_cost": 60,
+        "total_points": 28,
+        "minutes": 758,
+        "goals_scored": 0,
+        "assists": 2,
+        "clean_sheets": 3,
+        "goals_conceded": 11,
+        "own_goals": 0,
+        "penalties_saved": 0,
+        "penalties_missed": 0,
+        "yellow_cards": 0,
+        "red_cards": 0,
+        "saves": 0,
+        "bonus": 0,
+        "bps": 107,
+        "influence": "121.4",
+        "creativity": "189.8",
+        "threat": "235.0",
+        "ict_index": "54.6",
+        "starts": 0,
+        "expected_goals": "0.00",
+        "expected_assists": "0.00",
+        "expected_goal_involvements": "0.00",
+        "expected_goals_conceded": "0.00"
+    }
+]
