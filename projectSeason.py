@@ -77,10 +77,10 @@ def scoring(p):
 
     if minutes != 0:
         factor = projected_minutes/minutes
-        if factor > 1.2:
-            factor = 1.2
-        elif factor < 0.8:
-            factor = 0.8
+        if factor > 1.1:
+            factor = 1.1
+        elif factor < 0.9:
+            factor = 0.9
         pts = pts * factor
         projected_minutes = minutes * factor
 
@@ -88,11 +88,20 @@ def scoring(p):
         pts += 2 *games
     elif (projected_minutes/games > 10):
         pts += games
-
+    #Clean sheets
     cs = estimateCleanSheetsPerGame(p['fpl_id'],p['web_name_x'])
     cs = round(cs * projected_minutes,2)
 
+    #Times conceded more than 2
+    goals_conceded_per_game = p['goals_conceded']/(games-cs)
+    goals_conceded_minus = 0
+    if goals_conceded_per_game > 2:
+        goals_conceded_minus = -1*(goals_conceded_per_game-2)*(games-cs)
+
     pts += cs * clean_sheets[pos]
+    
+    if pos in [1,2]:
+        pts += goals_conceded_minus
 
     if p['chance_of_playing_next_round'] == 0.0:
         pts = 0
@@ -111,7 +120,8 @@ def scoring(p):
         'rank':0,
         'minutes_last_season':minutes,
         'minutes_projected':projected_minutes,
-        'clean_sheets':cs
+        'clean_sheets':cs,
+        'goals_conceded_minus':round(goals_conceded_minus)
     }
     return pl
 
