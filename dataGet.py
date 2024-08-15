@@ -54,6 +54,28 @@ async def main(season):
         with open('data/historicalUnderstatData/'+ season['season'] +'.json', 'w') as file:
             file.write(players)
 
+async def getPLayerGroupedStats(id):
+   
+    async with aiohttp.ClientSession() as session:
+        understat = Understat(session)
+        grouped_stats = await understat.get_player_grouped_stats(id)
+        grouped_stats = grouped_stats['season']
+        grouped_stats = json.dumps(grouped_stats)
+        
+        #print(grouped_stats)
+        with open('data/historicalUnderstatData/'+ str(id) +'.json', 'w') as file:
+            file.write(grouped_stats)
+
+def getHistoricUnderstatData():
+
+    with open('dataMergingFiles/maindata.json','r') as fpl:
+        all_players = json.load(fpl)
+
+    for p in all_players:
+        loop = asyncio.get_event_loop()
+        loop.run_until_complete(getPLayerGroupedStats(int(float(p['understat']))))
+
+
 def getUnderstatPlayers():
     print("Get Understat")
     season = {'season': "2024",'league':'epl'}

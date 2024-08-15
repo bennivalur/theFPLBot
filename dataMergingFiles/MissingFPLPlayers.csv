@@ -7,6 +7,7 @@ Kiwior,440854,8
 Nwaneri,499175,12
 Thomas,167199,20
 Tierney,192895,21
+Calafiori,466075,578
 Barrenechea,491287,30
 Buendia,195546,31
 Gauci,462492,39
@@ -28,6 +29,8 @@ H.Traorè,424044,67
 Jebbison,523700,69
 Neto,69752,73
 Paulsen,495145,75
+Huijsen,554605,580
+J.Araujo,436893,592
 Brierley,494041,87
 Jensen,207283,95
 Ji-soo,570241,96
@@ -36,6 +39,7 @@ Lewis-Potter,249231,98
 Nørgaard,128295,101
 Thiago,502500,107
 Valdimarsson,507433,109
+Carvalho,244858,314
 Cozier-Duberry,519324,118
 Enciso,474120,121
 I.Osman,612855,127
@@ -61,7 +65,9 @@ M.Sarr,204727,176
 Marc Guiu,499309,178
 Renato Veiga,551230,184
 W.Fofana,444463,189
+Neto,247632,560
 Wiley,488464,575
+Jørgensen,508479,581
 Andersen,174874,191
 J.Ayew,80146,192
 Chadi Riad,515621,195
@@ -71,18 +77,22 @@ Hughes,108413,203
 Johnstone,101982,204
 Kamada,209400,205
 Ward,55494,215
+I.Sarr,232185,585
 Gana,80801,222
 Garner,232928,223
 J.Virginia,222627,227
 McNeil,433154,230
 Ndiaye,440993,232
 Lindstrøm,463903,577
+O'Brien,512462,582
 Benda,428971,242
 Harris,515024,246
 Leno,80201,248
 Lukić,212314,249
 Mbabu,120721,250
 Stansfield,490146,256
+Sessegnon,184349,579
+J.Cuenca,246301,586
 Al-Hamadi,462387,260
 Baggott,517178,261
 Broadhead,173818,262
@@ -108,6 +118,7 @@ Taylor,231899,281
 Tuanzebe,180804,282
 Walton,108813,283
 Woolfenden,220583,284
+Townsend,108053,583
 B.Soumaré,225902,285
 Choudhury,197469,287
 Coady,94147,288
@@ -132,7 +143,6 @@ Vestergaard,93100,307
 Ward,95463,308
 Winks,157668,309
 A.Fatawu,531442,570
-Carvalho,244858,314
 Gakpo,243298,321
 Gomez,171287,322
 Jones,206915,324
@@ -152,6 +162,8 @@ Lindelof,184667,376
 Malacia,222690,379
 Zirkzee,458249,389
 Yoro,550864,572
+De Ligt,209365,593
+Mazraoui,230001,594
 Fraser,90105,397
 Hall,487838,399
 Hayden,153127,400
@@ -216,6 +228,10 @@ Emerson,109533,520
 L.Guilherme,577114,526
 N.Aguerd,210494,529
 Irving,229384,576
+Summerville,450070,587
+G.Rodríguez,197024,588
+Füllkrug,91889,589
+Todibo,462116,591
 B.Traore,476502,534
 Chiquinho,510363,537
 Cundle,245923,540
@@ -227,7 +243,6 @@ J.Gomes,448089,553
 King,138001,556
 Mario Jr.,151086,557
 Mosquera,501837,558
-Neto,247632,560
 Pedro Lima,641221,561
 Podence,200600,562
 R.Gomes,483081,563

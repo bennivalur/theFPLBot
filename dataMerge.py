@@ -9,15 +9,15 @@ def mergeDataSets():
     unders = pd.read_json('data/playerData/understat_players.json')
 
     fpl.rename(columns={'id': 'fpl_id'}, inplace=True)
-    unders.rename(columns={'id':'understat_id'},inplace=True)
+    unders.rename(columns={'id':'understat'},inplace=True)
 
     fpl.to_csv('data/playerData/fpl_players.csv',index=False)
     unders.to_csv('data/playerData/understat_players.csv',index=False)
-    keys = pd.read_csv('dataMergingFiles/UnderStatFPLMerging.csv', low_memory=False)
+    keys = pd.read_csv('dataMergingFiles/Master.csv', low_memory=False)
 
-    main_table = pd.merge(fpl,keys, on='fpl_id',how='inner')
+    main_table = pd.merge(fpl,keys, on='code',how='inner')
 
-    main_table = pd.merge(main_table,unders, on='understat_id',how='inner')
+    main_table = pd.merge(main_table,unders, on='understat',how='inner')
     #main_table = pd.merge(main_table,pos, on='fpl_id',how='inner')
 
     #player_teams = pd.merge(keys,unders,on='understat_id', how='inner')
@@ -30,7 +30,6 @@ def mergeDataSets():
     main_table.to_csv('dataMergingFiles/maindata.csv',index=False)
     main_table.to_json('dataMergingFiles/maindata.json',orient='records')
 
-    keys.to_json('keys_pl_understat.json',orient='records')
 
 def findMissingFPLPlayers():
     mergeKeys = pd.read_csv('dataMergingFiles/UnderStatFPLMerging.csv', low_memory=False)

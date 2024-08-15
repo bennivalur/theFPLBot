@@ -10,6 +10,9 @@ from drawRankings import drawRankings
 isPreseason = True
 getHistory = False
 getNewData = False
+buildRandom = False
+buildSmart = True
+
 
 #Get data
 if getNewData:
@@ -25,6 +28,7 @@ if getNewData:
     #Merge data
     mergeDataSets()
 if getHistory:
+    getHistoricUnderstatData()
     getFPLPlayerHistory()
     getUnderstatPlayerHistory()
 
@@ -34,12 +38,11 @@ if isPreseason:
     #pick preseason team
     projectionSource = '2024_2025_preseason'
     capital = 100
-    squad = buildSquad(100000,projectionSource)
-    #suggested = suggestTransfers(squad,1,capital,projectionSource)
-    #drawTeam(suggested[0],suggested[1],'preseason24_25_random',suggested[2])
-    squad = buildSmartSquad(100000,projectionSource)
-    #suggested = suggestTransfers(squad,1,capital,projectionSource)
-    #drawTeam(suggested[0],suggested[1],'preseason24_25_smart',suggested[2])
+    
+    if buildSmart:
+        squad = buildSmartSquad(1000000,projectionSource)
+    if buildRandom:
+       squad = buildSquad(1000000,projectionSource)
 
 
 #Make Weekly projections

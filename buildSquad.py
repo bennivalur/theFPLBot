@@ -265,7 +265,9 @@ def buildSmartSquad(attempts,source):
 
     start = time.time()
     print("run simulation")
-    team = getGKAndHandcuff(gks[0],gks)+defs[0:5]+mids[0:5]+fwds[0:3]
+    #team = getGKAndHandcuff(gks[0],gks)+defs[0:5]+mids[0:5]+fwds[0:3]
+    team = [gks[0],gks[-1]]+defs[0:5]+mids[0:5]+fwds[0:3]
+    #print(team)
     #print(team)
     
     if(isLegal(team,1000)):
@@ -273,6 +275,7 @@ def buildSmartSquad(attempts,source):
         drawTeam(team[2],team[0],'smart_suggest',[])
         
     else:
+        team = findBestFormation(team)
         print("not legal")
 
     
@@ -285,30 +288,34 @@ def buildSmartSquad(attempts,source):
     team = team[0]
     replacementIndex = 0
     while(counter < attempts):
-        print("-------------"+str(replacementIndex)+"----------loop-----"+str(counter)+"-----------------")
+        #print("-------------"+str(replacementIndex)+"----------loop-----"+str(counter)+"-----------------")
         #print(team)
         counter += 1
+        failed = 0
         #find lowest performer
-        print("find lowest performer")
-        weakestLink = sorted(team[2:],key=lambda k: k['pts'],reverse=True)[replacementIndex]
-        print(weakestLink)
+        #print("find lowest performer")
+        try:
+            weakestLink = sorted(team[2:],key=lambda k: k['pts'],reverse=True)[replacementIndex]
+        except:
+            failed += 1
+        #print(weakestLink)
 
         #find next replacement
         replacement = next((obj for obj in posMap[weakestLink['pos']] if obj['pts'] > weakestLink['pts'] and obj not in team),-1)
         if(replacement == -1):
-            print("no replacement found")
+            #print("no replacement found")
             replacementIndex += 1
             if replacementIndex > 12:
                 replacementIndex = 0
         else:
-            print(team.index(weakestLink))
-            print(replacement)
+            #print(team.index(weakestLink))
+            #print(replacement)
             
             team[team.index(weakestLink)] = replacement
 
             if(isLegal(team,1000)):
                 team = findBestFormation(team)
-                drawTeam(team[2],team[0],'v4_smart_suggest_'+ str(counter),[])
+                drawTeam(team[2],team[0],'v5_smart_suggest_'+ str(counter),[])
                 team = team[0]
             else:
                 team[team.index(replacement)] = weakestLink
