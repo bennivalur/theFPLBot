@@ -71,13 +71,9 @@ def scoring(p):
 
         
 
-        if(minutes/games >= 60):
-            pts += 2 *games
-        elif (minutes/games > 10):
-            pts += games
+        
 
     projected_minutes = predictMinutes(p['understat'])
-
 
     if minutes != 0:
         factor = projected_minutes/minutes
@@ -88,13 +84,23 @@ def scoring(p):
         pts = pts * factor
         projected_minutes = minutes * factor
 
+    if(projected_minutes/games >= 60):
+        pts += 2 *games
+    elif (projected_minutes/games > 10):
+        pts += games
+
+    cs = estimateCleanSheetsPerGame(p['fpl_id'],p['web_name_x'])
+    cs = round(cs * projected_minutes,2)
+
+    pts += cs * clean_sheets[pos]
+
     if p['chance_of_playing_next_round'] == 0.0:
         pts = 0
 
     pl = {
         'name':p['player_name'],
         'pts':round(pts,2),
-        'ppp':pts/((p['now_cost']/10)),
+        'ppp':round(pts/((p['now_cost']/10)),2),
         'team':teams[team],
         'color':colors[teams[team]],
         'pos':positions[pos],
@@ -104,7 +110,8 @@ def scoring(p):
         'code':p['code'],
         'rank':0,
         'minutes_last_season':minutes,
-        'minutes_projected':projected_minutes
+        'minutes_projected':projected_minutes,
+        'clean_sheets':cs
     }
     return pl
 
@@ -119,6 +126,20 @@ def calculateFinishingRating(understat_id):
 
     if totalXG != 0:
         return totalGoals/totalXG
+    else:
+        return 0
+    
+def estimateCleanSheetsPerGame(fpl_id,web_name):
+    with open('data/historicFPLData/'+ web_name + '_' + str(fpl_id) + '.json','r') as history:
+        history = json.load(history)
+    totalCleanSheets = 0
+    totalMinutes = 0
+    for season in history:
+        totalCleanSheets += float(season['clean_sheets'])
+        totalMinutes += float(season['minutes'])
+
+    if totalMinutes != 0:
+        return totalCleanSheets/totalMinutes
     else:
         return 0
 

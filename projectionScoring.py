@@ -7,7 +7,7 @@ positions = [
 ]
 #Clean Sheets
 #Points for clean sheets by position
-cs = [
+clean_sheets = [
     0,
     4,
     4,
@@ -18,7 +18,7 @@ cs = [
 #Points for goals by positions
 goals_scoring = [
     0,
-    6,
+    10,
     6,
     5,
     4
