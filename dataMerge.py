@@ -32,8 +32,8 @@ def mergeDataSets():
 
 
 def findMissingFPLPlayers():
-    mergeKeys = pd.read_csv('dataMergingFiles/UnderStatFPLMerging.csv', low_memory=False)
-    mergeKeys = mergeKeys['fpl_code'].tolist()
+    mergeKeys = pd.read_csv('dataMergingFiles/master.csv', low_memory=False)
+    mergeKeys = mergeKeys['code'].tolist()
     
     #rint(mergeKeys)
 
@@ -60,8 +60,8 @@ def findMissingFPLPlayers():
         dict_writer.writerows(missingPlayers)
 
 def findMissingUnderstatPlayers():
-    mergeKeys = pd.read_csv('dataMergingFiles/UnderStatFPLMerging.csv', low_memory=False)
-    mergeKeys = mergeKeys['understat_id'].tolist()
+    mergeKeys = pd.read_csv('dataMergingFiles/master.csv', low_memory=False)
+    mergeKeys = mergeKeys['understat'].tolist()
     
     with open('data/playerData/understat_players.json','r') as fpl:
         all_players = json.load(fpl)
@@ -73,10 +73,10 @@ def findMissingUnderstatPlayers():
                 'player_name': p['player_name'],
                 'understat_id':p['id'],
             })
-    
-    keys = missingPlayers[0].keys()
+    if len(missingPlayers) != 0:
+        keys = missingPlayers[0].keys()
 
-    with open('dataMergingFiles/MissingUnderstatPlayers.csv', 'w', encoding='utf8', newline='') as output_file:
-        dict_writer = csv.DictWriter(output_file, keys)
-        dict_writer.writeheader()
-        dict_writer.writerows(missingPlayers)
+        with open('dataMergingFiles/MissingUnderstatPlayers.csv', 'w', encoding='utf8', newline='') as output_file:
+            dict_writer = csv.DictWriter(output_file, keys)
+            dict_writer.writeheader()
+            dict_writer.writerows(missingPlayers)

@@ -41,9 +41,7 @@ async def main(season):
         url = 'https://understat.com/main/getPlayersStats/'
         #if(getNextGameWeek() < 6):
         print(season)
-        print("season")
         myobj = season
-        print(myobj)
         #else:
         #    myobj = {'season': season,'league':'epl','date_start':getRangeStart(5)}
 
@@ -51,7 +49,7 @@ async def main(season):
         players = players.json()
         players = players['response']['players']
         players = json.dumps(players)
-        with open('data/historicalUnderstatData/'+ season['season'] +'.json', 'w') as file:
+        with open('data/playerData/understat_players.json', 'w') as file:
             file.write(players)
 
 async def getPLayerGroupedStats(id):
@@ -62,7 +60,9 @@ async def getPLayerGroupedStats(id):
         grouped_stats = grouped_stats['season']
         grouped_stats = json.dumps(grouped_stats)
         
+            
         #print(grouped_stats)
+        
         with open('data/historicalUnderstatData/'+ str(id) +'.json', 'w') as file:
             file.write(grouped_stats)
 
@@ -75,16 +75,25 @@ def getHistoricUnderstatData():
         loop = asyncio.get_event_loop()
         loop.run_until_complete(getPLayerGroupedStats(int(float(p['understat']))))
 
+def getHistoricUnderstatDataByID(understatID):
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(getPLayerGroupedStats(understatID))
 
-def getUnderstatPlayers():
+
+def getUnderstatPlayers(season):
     print("Get Understat")
-    season = {'season': "2024",'league':'epl'}
+    season = {'season': str(season),'league':'epl'}
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main(season))
 
-def getUnderstatPlayerHistory():
-    print("Get Understat")
-    season = {'season': "2023",'league':'epl'}
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main(season))
 
+def getNextGameWeek():
+    fpl = urllib.request.urlopen("https://fantasy.premierleague.com/api/bootstrap-static/").read()
+    fpl = json.loads(fpl)
+    fpl_players = fpl['elements']
+
+    _events = fpl['events']
+    
+    for e in _events:
+        if(e['is_next']):
+            return e['id']
