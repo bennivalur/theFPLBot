@@ -244,6 +244,7 @@ def getGKAndHandcuff(gk,gks):
     return gks[0:2]
 
 def buildSmartSquad(attempts,source):
+    start = time.time()
     with open('data/projections/' + source +  '.json','r') as fpl:
         all_players = json.load(fpl)
 
@@ -323,6 +324,9 @@ def buildSmartSquad(attempts,source):
                 if replacementIndex > 12:
                     replacementIndex = 0
         
+    end = time.time()
+
+    print('Finished ' + str(attempts) + ' in ' + str((end - start)) + ' seconds') 
     
     return team
 

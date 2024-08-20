@@ -42,7 +42,7 @@ if isPreseason:
     if buildSmart:
         squad = buildSmartSquad(1000000,projectionSource)
     if buildRandom:
-       squad = buildSquad(1000000,projectionSource)
+       squad = buildSquad(1000000000,projectionSource)
 
 
 #Make Weekly projections
