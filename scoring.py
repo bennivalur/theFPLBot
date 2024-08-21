@@ -10,6 +10,26 @@ def scoring(p,isPreseason):
     pos = p['element_type']
     team = p['team']
 
+    if p['team_title'] == None:
+        return {
+            'name':p['player_name'],
+            'pts':0,
+            'ppp':0,
+            'team':teams[team],
+            'color':colors[teams[team]],
+            'pos':positions[pos],
+            'cost':p['now_cost'],
+            'short':p['web_name_x'],
+            'fpl_id':p['fpl_id'],
+            'code':p['code'],
+            'rank':0,
+            'minutes_last':0,
+            'minutes_projected':0,
+            'clean_sheets':0,
+            'goals_conceded_minus':0
+        }
+    
+
     games = p['games']
     
     pts = 0

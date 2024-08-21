@@ -14,13 +14,13 @@ def getTeam(team_id,week):
     except:
         return 'error'
 
-def convertFPLteam(team):
+def convertFPLteam(team,season,gameweek):
     squad = []
-    with open('tempfiles/projections.json','r') as fpl:
+    with open('data/projections/' + str(season) + '_' + str(season+1)+ '/week_' + str(gameweek) +'.json','r') as fpl:
         all_players = json.load(fpl)
     for p in team:
         squad.append((next((x for x in all_players if x['fpl_id'] == p['element']), None)))
-
+    
     squad = list(filter(lambda d: d['pos'] == 'GK', squad)) + list(filter(lambda d: d['pos'] == 'D', squad)) + list(filter(lambda d: d['pos'] == 'M', squad)) +list(filter(lambda d: d['pos'] == 'F', squad))
 
     return squad
@@ -95,7 +95,7 @@ def suggestTransfers(players,free_transfers,capital,source):
     transfered_players = list(itertools.filterfalse(lambda x: x in players, best_team)) + list(itertools.filterfalse(lambda x: x in best_team, players))
     print('-------------')
     print(best_formation)
-    return ['best formation should be here',best_team,transfered_players]
+    return [best_formation,best_team,transfered_players]
     
     
 

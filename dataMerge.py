@@ -17,7 +17,7 @@ def mergeDataSets():
 
     main_table = pd.merge(fpl,keys, on='code',how='inner')
 
-    main_table = pd.merge(main_table,unders, on='understat',how='inner')
+    main_table = pd.merge(main_table,unders, on='understat',how='left')
     #main_table = pd.merge(main_table,pos, on='fpl_id',how='inner')
 
     #player_teams = pd.merge(keys,unders,on='understat_id', how='inner')

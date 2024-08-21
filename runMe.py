@@ -10,7 +10,7 @@ from trackPerformance import *
 #Flags
 
 getHistory = False
-getNewData = False
+getNewData = True
 isPreseason = False
 buildRandom = False
 buildSmart = False
@@ -53,12 +53,18 @@ if isPreseason:
 
 if not isPreseason:
     trackPerformance(teamToGet,gameweek)
+    #TODO: Calculate Clean sheet chances
     makeWeeklyProjections(gameweek)
-#Make Weekly projections
+    
+    team = getTeam(teamToGet,gameweek-1)
+    squad = convertFPLteam(team['picks'],season,gameweek)
 
-    #Calculate Clean sheet chances
+    capital = team['entry_history']['value'] ##+ team['entry_history']['bank']
+    print("capital:" + str(capital))
+    source = str(season) + '_' + str(season+1) + '/week_' + str(gameweek)
+    suggested = suggestTransfers(squad,1,capital,source)
+    drawTeam(suggested[0],suggested[1],'week_' + str(gameweek) + '_transfers',suggested[2])
 
-    #Update players Goals Over Expected (finishing rating)
 
 #Print team
 

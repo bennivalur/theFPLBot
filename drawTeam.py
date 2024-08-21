@@ -18,6 +18,19 @@ def drawTeam(formation, players,file_name,transfers):
     f = sorted(list(filter(lambda d: d['pos'] == 'F', players)),key=lambda k: k['pts'],reverse=True)
     players=g+d+m+f
 
+    #Find captain and vice captain
+    captain = {"pts":0}
+    vice_captain = {"pts":0}
+    for p in players:
+        if p['pts'] > captain['pts']:
+            vice_captain = captain
+            captain = p
+        elif p['pts'] > vice_captain['pts']:
+            vice_captain = p
+    
+    captain['short'] = captain['short']+'(C)'
+    vice_captain['short'] = vice_captain['short']+'(V)'
+
     for p in players:
         print(p)
     field_width = 680
