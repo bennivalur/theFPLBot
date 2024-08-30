@@ -10,7 +10,7 @@ from trackPerformance import *
 #Flags
 
 getHistory = False
-getNewData = True
+getNewData = False
 isPreseason = False
 buildRandom = False
 buildSmart = False

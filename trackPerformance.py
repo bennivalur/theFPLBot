@@ -7,17 +7,19 @@ def trackPerformance(teamToGet,week):
     with open('data/performanceTracking/overallTrack.json','r') as overalltrack:
         overalltrack = json.load(overalltrack)
 
-    if overalltrack[-1]['entry_history']['event'] < week-1:
-        try:
+    if overalltrack[-1]['event'] < week-1:
+        
             print("Getting Event Entry")
-            with urllib.request.urlopen("https://fantasy.premierleague.com/api/entry/"+ str(teamToGet) +"/event/"+ str(week) +"/picks/") as url:
+            urllink = "https://fantasy.premierleague.com/api/entry/"+ str(teamToGet) +"/event/"+ str(week-1) +"/picks/"
+            
+            with urllib.request.urlopen(urllink) as url:
                 data = json.loads(url.read().decode())
                 
-                overalltrack = overalltrack.append(data)
+                overalltrack.append(data['entry_history'])
+
                 with open('data/performanceTracking/overallTrack.json', 'w') as file:
                     file.write(json.dumps(overalltrack))      
-        except:
-            return 'error'
+        
     else:
         print("Latest Track already on file")
     #TODO make a trend graphic or something

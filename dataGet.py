@@ -72,8 +72,9 @@ def getHistoricUnderstatData():
         all_players = json.load(fpl)
 
     for p in all_players:
-        loop = asyncio.get_event_loop()
-        loop.run_until_complete(getPLayerGroupedStats(int(float(p['understat']))))
+        if p['understat'] != None:
+            loop = asyncio.get_event_loop()
+            loop.run_until_complete(getPLayerGroupedStats(int(float(p['understat']))))
 
 def getHistoricUnderstatDataByID(understatID):
     loop = asyncio.get_event_loop()
