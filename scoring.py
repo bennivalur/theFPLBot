@@ -25,6 +25,12 @@ def scoring(p,isPreseason):
             'rank':0,
             'minutes_last':0,
             'minutes_projected':0,
+            'finishing_rate':0,
+            'goals':0,
+            'assists':0,
+            'xG':0,
+            'xA':0,
+            'xGxA':0,
             'clean_sheets':0,
             'goals_conceded_minus':0
         }
@@ -58,29 +64,36 @@ def scoring(p,isPreseason):
             pts += p['saves'] * gk_scoring['saves']
             pts += p['penalties_saved'] * gk_scoring['penalties_saved']
 
-        
+        pts = pts/games
 
         
 
     projected_minutes = predictMinutes(p['understat'])
 
-    if minutes != 0:
-        factor = projected_minutes/minutes
-        if factor > 1.1:
-            factor = 1.1
-        elif factor < 0.9:
-            factor = 0.9
-        pts = pts * factor
-        projected_minutes = minutes * factor
-    
-    if not isPreseason:
+    if isPreseason:
+        if minutes != 0:
+            factor = projected_minutes/minutes
+            if factor > 1.1:
+                factor = 1.1
+            elif factor < 0.9:
+                factor = 0.9
+            pts = pts * factor
+            projected_minutes = minutes * factor
+        
+        if(projected_minutes/games >= 60):
+            pts += 2 *games
+        elif (projected_minutes/games > 10):
+            pts += games
+    else:
         if projected_minutes > 90:
             projected_minutes = 90
 
-    if(projected_minutes/games >= 60):
-        pts += 2 *games
-    elif (projected_minutes/games > 10):
-        pts += games
+        if projected_minutes >= 59:
+            pts += 2
+        elif projected_minutes > 0:
+            pts += 1
+        
+    
     #Clean sheets
     cs = estimateCleanSheetsPerGame(p['fpl_id'],p['web_name_x'])
     cs = round(cs * projected_minutes,2)
@@ -99,6 +112,8 @@ def scoring(p,isPreseason):
     if p['chance_of_playing_next_round'] == 0.0:
         pts = 0
 
+    
+
     pl = {
         'name':p['player_name'],
         'pts':round(pts,2),
@@ -113,6 +128,12 @@ def scoring(p,isPreseason):
         'rank':0,
         'minutes_last':minutes,
         'minutes_projected':projected_minutes,
+        'finishing_rate':round(finishing_rate,2),
+        'goals':goals,
+        'assists':assists,
+        'xG':round(xg,2),
+        'xA':round(xa,2),
+        'xGxA':round(xg+xa,2),
         'clean_sheets':cs,
         'goals_conceded_minus':round(goals_conceded_minus)
     }
@@ -134,7 +155,10 @@ def calculateFinishingRating(understat_id):
         totalGoals += float(season['goals'])
 
     if totalXG != 0:
-        return totalGoals/totalXG
+        if totalGoals/totalXG > 2:
+            return 2
+        else:
+            return totalGoals/totalXG
     else:
         return 0
     
